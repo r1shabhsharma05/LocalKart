@@ -1,1 +1,412 @@
-Y29uc3QgZnMgPSByZXF1aXJlKCdmcy9wcm9taXNlcycpOwpjb25zdCBQcm9kdWN0ID0gcmVxdWlyZSgnLi4vbW9kZWxzL1Byb2R1Y3QnKTsKY29uc3QgTWVzc2FnZSA9IHJlcXVpcmUoJy4uL21vZGVscy9NZXNzYWdlJyk7CmNvbnN0IHsgcGFyc2VQYWdpbmF0aW9uIH0gPSByZXF1aXJlKCcuLi91dGlscy9wYWdpbmF0aW9uJyk7CmNvbnN0IHsgY2xvdWRpbmFyeSwgaGFzQ2xvdWRpbmFyeUNvbmZpZyB9ID0gcmVxdWlyZSgnLi4vY29uZmlnL2Nsb3VkaW5hcnknKTsKCmNvbnN0IGVzY2FwZVJlZ2V4ID0gKHZhbHVlKSA9PiB2YWx1ZS5yZXBsYWNlKC9bLiorP14ke30oKXxbXF1cXF0vZywgJ1xcJCYnKTsKY29uc3QgZGVtb1RpdGxlUGF0dGVybiA9IC9eTG9jYWxLYXJ0IERlbW8gXGQrOi9pOwpjb25zdCBpc0RlbW9Qcm9kdWN0ID0gKHByb2R1Y3QpID0+IHByb2R1Y3QuaXNEZW1vID09PSB0cnVlIHx8IGRlbW9UaXRsZVBhdHRlcm4udGVzdChwcm9kdWN0LnRpdGxlKTsKY29uc3QgcmVtb3ZlTG9jYWxVcGxvYWRzID0gYXN5bmMgKGZpbGVzKSA9PiB7CiAgYXdhaXQgUHJvbWlzZS5hbGwoKGZpbGVzIHx8IFtdKS5tYXAoYXN5bmMgKGZpbGUpID0+IHsKICAgIHRyeSB7CiAgICAgIGF3YWl0IGZzLnVubGluayhmaWxlLnBhdGgpOwogICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgaWYgKGVycm9yLmNvZGUgIT09ICdFTk9FTlQnKSB0aHJvdyBlcnJvcjsKICAgIH0KICB9KSk7Cn07Cgpjb25zdCBnZXRSZXBsYWNlZERlbW9JZHMgPSBhc3luYyAoY2FtcHVzTmFtZSkgPT4gewogIGNvbnN0IGNhbXB1c0ZpbHRlciA9IGNhbXB1c05hbWUKICAgID8geyBjb2xsZWdlOiBuZXcgUmVnRXhwKGBeJHtlc2NhcGVSZWdleChjYW1wdXNOYW1lKX0kYCwgJ2knKSB9CiAgICA6IHt9OwogIGNvbnN0IFtyZWFsQ291bnRzLCBkZW1vUHJvZHVjdHNdID0gYXdhaXQgUHJvbWlzZS5hbGwoWwogICAgUHJvZHVjdC5hZ2dyZWdhdGUoWwogICAgICB7CiAgICAgICAgJG1hdGNoOiB7CiAgICAgICAgICAuLi5jYW1wdXNGaWx0ZXIsCiAgICAgICAgICBzdGF0dXM6ICdhY3RpdmUnLAogICAgICAgICAgaXNEZW1vOiB7ICRuZTogdHJ1ZSB9LAogICAgICAgICAgdGl0bGU6IHsgJG5vdDogZGVtb1RpdGxlUGF0dGVybiB9LAogICAgICAgIH0sCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAkZ3JvdXA6IHsKICAgICAgICAgIF9pZDogewogICAgICAgICAgICBjb2xsZWdlOiB7ICR0b0xvd2VyOiAnJGNvbGxlZ2UnIH0sCiAgICAgICAgICAgIGNhdGVnb3J5OiAnJGNhdGVnb3J5JywKICAgICAgICAgIH0sCiAgICAgICAgICBjb3VudDogeyAkc3VtOiAxIH0sCiAgICAgICAgfSwKICAgICAgfSwKICAgIF0pLAogICAgUHJvZHVjdC5maW5kKHsKICAgICAgLi4uY2FtcHVzRmlsdGVyLAogICAgICBzdGF0dXM6ICdhY3RpdmUnLAogICAgICAkb3I6IFt7IGlzRGVtbzogdHJ1ZSB9LCB7IHRpdGxlOiBkZW1vVGl0bGVQYXR0ZXJuIH1dLAogICAgfSkuc29ydCh7IGNvbGxlZ2U6IDEsIGNhdGVnb3J5OiAxLCBjcmVhdGVkQXQ6IDEsIF9pZDogMSB9KS5zZWxlY3QoJ19pZCBjb2xsZWdlIGNhdGVnb3J5JyksCiAgXSk7CgogIGNvbnN0IHJlbWFpbmluZ0J5Q2FtcHVzQ2F0ZWdvcnkgPSBuZXcgTWFwKCk7CgogIGZvciAoY29uc3QgeyBfaWQsIGNvdW50IH0gb2YgcmVhbENvdW50cykgewogICAgY29uc3QgY2F0ZWdvcnlLZXkgPSBKU09OLnN0cmluZ2lmeShbU3RyaW5nKF9pZC5jb2xsZWdlIHx8ICcnKS50b0xvd2VyQ2FzZSgpLCBfaWQuY2F0ZWdvcnldKTsKICAgIHJlbWFpbmluZ0J5Q2FtcHVzQ2F0ZWdvcnkuc2V0KGNhdGVnb3J5S2V5LCBjb3VudCk7CiAgfQoKICBjb25zdCByZXBsYWNlZElkcyA9IG5ldyBTZXQoKTsKICBmb3IgKGNvbnN0IHByb2R1Y3Qgb2YgZGVtb1Byb2R1Y3RzKSB7CiAgICBjb25zdCBjYXRlZ29yeUtleSA9IEpTT04uc3RyaW5naWZ5KFtTdHJpbmcocHJvZHVjdC5jb2xsZWdlIHx8ICcnKS50b0xvd2VyQ2FzZSgpLCBwcm9kdWN0LmNhdGVnb3J5XSk7CiAgICBjb25zdCBjYXRlZ29yeVJlbWFpbmluZyA9IHJlbWFpbmluZ0J5Q2FtcHVzQ2F0ZWdvcnkuZ2V0KGNhdGVnb3J5S2V5KSB8fCAwOwogICAgaWYgKCFjYXRlZ29yeVJlbWFpbmluZykgY29udGludWU7CgogICAgcmVwbGFjZWRJZHMuYWRkKHByb2R1Y3QuX2lkLnRvU3RyaW5nKCkpOwogICAgcmVtYWluaW5nQnlDYW1wdXNDYXRlZ29yeS5zZXQoY2F0ZWdvcnlLZXksIGNhdGVnb3J5UmVtYWluaW5nIC0gMSk7CiAgfQoKICByZXR1cm4gZGVtb1Byb2R1Y3RzCiAgICAuZmlsdGVyKChwcm9kdWN0KSA9PiByZXBsYWNlZElkcy5oYXMocHJvZHVjdC5faWQudG9TdHJpbmcoKSkpCiAgICAubWFwKChwcm9kdWN0KSA9PiBwcm9kdWN0Ll9pZCk7Cn07Cgpjb25zdCBjcmVhdGVQcm9kdWN0ID0gYXN5bmMgKHJlcSwgcmVzKSA9PiB7CiAgdHJ5IHsKICAgIGNvbnN0IHsgdGl0bGUsIGRlc2NyaXB0aW9uLCBjYXRlZ29yeSwgcHJpY2UsIGNvbmRpdGlvbiwgbG9jYXRpb24gfSA9IHJlcS5ib2R5OwogICAgY29uc3QgY2xlYW5UaXRsZSA9IHR5cGVvZiB0aXRsZSA9PT0gJ3N0cmluZycgPyB0aXRsZS50cmltKCkgOiAnJzsKICAgIGNvbnN0IGNsZWFuRGVzY3JpcHRpb24gPSB0eXBlb2YgZGVzY3JpcHRpb24gPT09ICdzdHJpbmcnID8gZGVzY3JpcHRpb24udHJpbSgpIDogJyc7CiAgICBjb25zdCBjbGVhbkNhdGVnb3J5ID0gdHlwZW9mIGNhdGVnb3J5ID09PSAnc3RyaW5nJyA/IGNhdGVnb3J5LnRyaW0oKSA6ICcnOwogICAgY29uc3QgcHJpY2VWYWx1ZSA9IE51bWJlcihwcmljZSk7CgogICAgaWYgKAogICAgICAhY2xlYW5UaXRsZQogICAgICB8fCBjbGVhblRpdGxlLmxlbmd0aCA+IDEyMAogICAgICB8fCAhY2xlYW5EZXNjcmlwdGlvbgogICAgICB8fCBjbGVhbkRlc2NyaXB0aW9uLmxlbmd0aCA+IDMwMDAKICAgICAgfHwgIWNsZWFuQ2F0ZWdvcnkKICAgICAgfHwgcHJpY2UgPT09IHVuZGVmaW5lZAogICAgICB8fCBwcmljZSA9PT0gbnVsbAogICAgICB8fCBwcmljZSA9PT0gJycKICAgICAgfHwgIU51bWJlci5pc0Zpbml0ZShwcmljZVZhbHVlKQogICAgICB8fCBwcmljZVZhbHVlIDwgMAogICAgICB8fCAobG9jYXRpb24gIT09IHVuZGVmaW5lZCAmJiB0eXBlb2YgbG9jYXRpb24gIT09ICdzdHJpbmcnKQogICAgICB8fCAodHlwZW9mIGxvY2F0aW9uID09PSAnc3RyaW5nJyAmJiBsb2NhdGlvbi50cmltKCkubGVuZ3RoID4gMTYwKQogICAgKSB7CiAgICAgIGF3YWl0IHJlbW92ZUxvY2FsVXBsb2FkcyhyZXEuZmlsZXMpOwogICAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDApLmpzb24oeyBtZXNzYWdlOiAnUGxlYXNlIHByb3ZpZGUgYSB0aXRsZSwgZGVzY3JpcHRpb24sIGNhdGVnb3J5IGFuZCB2YWxpZCBwcmljZScgfSk7CiAgICB9CgogICAgY29uc3QgaW1hZ2VVcmxzID0gKHJlcS5maWxlcyB8fCBbXSkubWFwKChmaWxlKSA9PiBgL3VwbG9hZHMvJHtlbmNvZGVVUklDb21wb25lbnQoZmlsZS5maWxlbmFtZSl9YCk7CiAgICBpZiAoaGFzQ2xvdWRpbmFyeUNvbmZpZyAmJiByZXEuZmlsZXM/Lmxlbmd0aCkgewogICAgICBmb3IgKGNvbnN0IFtpbmRleCwgZmlsZV0gb2YgcmVxLmZpbGVzLmVudHJpZXMoKSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBjbG91ZGluYXJ5LnVwbG9hZGVyLnVwbG9hZChmaWxlLnBhdGgsIHsgZm9sZGVyOiAnbG9jYWxrYXJ0L3Byb2R1Y3RzJyB9KTsKICAgICAgICAgIGltYWdlVXJsc1tpbmRleF0gPSByZXN1bHQuc2VjdXJlX3VybDsKICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgY29uc29sZS5lcnJvcignQ2xvdWRpbmFyeSB1cGxvYWQgZmFpbGVkOyByZXRhaW5pbmcgdGhlIGxvY2FsIGltYWdlOicsIGVycm9yLm1lc3NhZ2UpOwogICAgICAgIH0KICAgICAgfQogICAgfQoKICAgIGNvbnN0IHByb2R1Y3QgPSBhd2FpdCBQcm9kdWN0LmNyZWF0ZSh7CiAgICAgIHRpdGxlOiBjbGVhblRpdGxlLAogICAgICBkZXNjcmlwdGlvbjogY2xlYW5EZXNjcmlwdGlvbiwKICAgICAgY2F0ZWdvcnk6IGNsZWFuQ2F0ZWdvcnksCiAgICAgIHByaWNlOiBwcmljZVZhbHVlLAogICAgICBjb25kaXRpb246IGNvbmRpdGlvbiB8fCAnR29vZCcsCiAgICAgIGxvY2F0aW9uOiB0eXBlb2YgbG9jYXRpb24gPT09ICdzdHJpbmcnID8gbG9jYXRpb24udHJpbSgpIDogJycsCiAgICAgIGltYWdlczogaW1hZ2VVcmxzLAogICAgICBzZWxsZXI6IHJlcS51c2VyLl9pZCwKICAgICAgY29sbGVnZTogcHJvY2Vzcy5lbnYuQ0FNUFVTX05BTUU/LnRyaW0oKSB8fCByZXEudXNlci5jb2xsZWdlLAogICAgfSk7CgogICAgcmVzLnN0YXR1cygyMDEpLmpzb24oewogICAgICBtZXNzYWdlOiAnUHJvZHVjdCBjcmVhdGVkIHN1Y2Nlc3NmdWxseScsCiAgICAgIHByb2R1Y3Q6IGF3YWl0IHByb2R1Y3QucG9wdWxhdGUoJ3NlbGxlcicsICduYW1lIGNvbGxlZ2UnKSwKICAgIH0pOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCdQcm9kdWN0IGNyZWF0aW9uIGZhaWxlZDonLCBlcnJvcik7CiAgICB0cnkgewogICAgICBhd2FpdCByZW1vdmVMb2NhbFVwbG9hZHMocmVxLmZpbGVzKTsKICAgIH0gY2F0Y2ggKGNsZWFudXBFcnJvcikgewogICAgICBjb25zb2xlLmVycm9yKCdVcGxvYWRlZCBpbWFnZSBjbGVhbnVwIGZhaWxlZDonLCBjbGVhbnVwRXJyb3IpOwogICAgfQogICAgcmVzLnN0YXR1cyhlcnJvci5uYW1lID09PSAnVmFsaWRhdGlvbkVycm9yJyA/IDQwMCA6IDUwMCkuanNvbih7CiAgICAgIG1lc3NhZ2U6IGVycm9yLm5hbWUgPT09ICdWYWxpZGF0aW9uRXJyb3InID8gJ1BsZWFzZSBjaGVjayB0aGUgbGlzdGluZyBkZXRhaWxzJyA6ICdQcm9kdWN0IGNyZWF0aW9uIGZhaWxlZCcsCiAgICB9KTsKICB9Cn07Cgpjb25zdCBnZXRQcm9kdWN0cyA9IGFzeW5jIChyZXEsIHJlcykgPT4gewogIHRyeSB7CiAgICBjb25zdCB7IGNhdGVnb3J5LCBtaW5QcmljZSwgbWF4UHJpY2UsIHN0YXR1cyB9ID0gcmVxLnF1ZXJ5OwogICAgY29uc3QgZmlsdGVyID0geyBzdGF0dXM6IHN0YXR1cyA9PT0gJ3NvbGQnID8gJ3NvbGQnIDogJ2FjdGl2ZScgfTsKICAgIGNvbnN0IHJlcXVlc3RlZENhbXB1cyA9IHR5cGVvZiByZXEucXVlcnkuY29sbGVnZSA9PT0gJ3N0cmluZycgPyByZXEucXVlcnkuY29sbGVnZS50cmltKCkgOiAnJzsKICAgIGNvbnN0IGNhbXB1c05hbWUgPSBwcm9jZXNzLmVudi5DQU1QVVNfTkFNRT8udHJpbSgpIHx8IHJlcXVlc3RlZENhbXB1czsKCiAgICBpZiAoY2FtcHVzTmFtZSkgZmlsdGVyLmNvbGxlZ2UgPSBuZXcgUmVnRXhwKGBeJHtlc2NhcGVSZWdleChjYW1wdXNOYW1lKX0kYCwgJ2knKTsKCiAgICBpZiAodHlwZW9mIGNhdGVnb3J5ID09PSAnc3RyaW5nJyAmJiBjYXRlZ29yeSAhPT0gJ0FsbCcpIHsKICAgICAgZmlsdGVyLmNhdGVnb3J5ID0gbmV3IFJlZ0V4cChgXiR7ZXNjYXBlUmVnZXgoY2F0ZWdvcnkudHJpbSgpKX0kYCwgJ2knKTsKICAgIH0KCiAgICBpZiAobWluUHJpY2UgfHwgbWF4UHJpY2UpIHsKICAgICAgZmlsdGVyLnByaWNlID0ge307CiAgICAgIGlmIChtaW5QcmljZSAmJiBOdW1iZXIuaXNGaW5pdGUoTnVtYmVyKG1pblByaWNlKSkpIGZpbHRlci5wcmljZS4kZ3RlID0gTnVtYmVyKG1pblByaWNlKTsKICAgICAgaWYgKG1heFByaWNlICYmIE51bWJlci5pc0Zpbml0ZShOdW1iZXIobWF4UHJpY2UpKSkgZmlsdGVyLnByaWNlLiRsdGUgPSBOdW1iZXIobWF4UHJpY2UpOwogICAgfQoKICAgIC8vIGBxYCBpcyB0aGUgZG9jdW1lbnRlZCBzZWFyY2ggcGFyYW07IGBzZWFyY2hgIHN0YXlzIGFzIGEgbGVnYWN5IGFsaWFzLgogICAgY29uc3Qgc2VhcmNoVGVybSA9IHR5cGVvZiByZXEucXVlcnkucSA9PT0gJ3N0cmluZycgJiYgcmVxLnF1ZXJ5LnEudHJpbSgpCiAgICAgID8gcmVxLnF1ZXJ5LnEKICAgICAgOiByZXEucXVlcnkuc2VhcmNoOwogICAgaWYgKHR5cGVvZiBzZWFyY2hUZXJtID09PSAnc3RyaW5nJyAmJiBzZWFyY2hUZXJtLnRyaW0oKSkgewogICAgICBjb25zdCB0ZXJtID0gbmV3IFJlZ0V4cChlc2NhcGVSZWdleChzZWFyY2hUZXJtLnRyaW0oKSksICdpJyk7CiAgICAgIGZpbHRlci4kb3IgPSBbeyB0aXRsZTogdGVybSB9LCB7IGRlc2NyaXB0aW9uOiB0ZXJtIH0sIHsgY2F0ZWdvcnk6IHRlcm0gfV07CiAgICB9CgogICAgY29uc3QgcmVwbGFjZWREZW1vSWRzID0gYXdhaXQgZ2V0UmVwbGFjZWREZW1vSWRzKGNhbXB1c05hbWUpOwogICAgaWYgKHJlcGxhY2VkRGVtb0lkcy5sZW5ndGgpIGZpbHRlci5faWQgPSB7ICRuaW46IHJlcGxhY2VkRGVtb0lkcyB9OwoKICAgIC8vIFBhZ2luYXRlZCBzaGFwZSBvbmx5IHdoZW4gdGhlIGNhbGxlciBhc2tzIGZvciBpdCAocGFnZS9saW1pdC9xKTsKICAgIC8vIG90aGVyd2lzZSB0aGUgaGlzdG9yaWMgYmFyZS1hcnJheSByZXNwb25zZSBpcyByZXR1cm5lZCB1bmNoYW5nZWQsCiAgICAvLyBzbyB0aGUgZXhpc3RpbmcgZnJvbnRlbmQga2VlcHMgd29ya2luZy4KICAgIGNvbnN0IHdhbnRzUGFnZSA9IHJlcS5xdWVyeS5wYWdlICE9PSB1bmRlZmluZWQgfHwgcmVxLnF1ZXJ5LmxpbWl0ICE9PSB1bmRlZmluZWQgfHwgcmVxLnF1ZXJ5LnEgIT09IHVuZGVmaW5lZDsKICAgIGlmICghd2FudHNQYWdlKSB7CiAgICAgIGNvbnN0IHByb2R1Y3RzID0gYXdhaXQgUHJvZHVjdC5maW5kKGZpbHRlcikKICAgICAgICAucG9wdWxhdGUoJ3NlbGxlcicsICduYW1lIGNvbGxlZ2UnKQogICAgICAgIC5zb3J0KHsgY3JlYXRlZEF0OiAtMSB9KTsKICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5qc29uKHByb2R1Y3RzKTsKICAgIH0KCiAgICBjb25zdCB7IHBhZ2UsIGxpbWl0LCBza2lwIH0gPSBwYXJzZVBhZ2luYXRpb24ocmVxLnF1ZXJ5KTsKICAgIGNvbnN0IFt0b3RhbCwgcHJvZHVjdHNdID0gYXdhaXQgUHJvbWlzZS5hbGwoWwogICAgICBQcm9kdWN0LmNvdW50RG9jdW1lbnRzKGZpbHRlciksCiAgICAgIFByb2R1Y3QuZmluZChmaWx0ZXIpCiAgICAgICAgLnBvcHVsYXRlKCdzZWxsZXInLCAnbmFtZSBjb2xsZWdlJykKICAgICAgICAuc29ydCh7IGNyZWF0ZWRBdDogLTEgfSkKICAgICAgICAuc2tpcChza2lwKQogICAgICAgIC5saW1pdChsaW1pdCksCiAgICBdKTsKICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsKICAgICAgcHJvZHVjdHMsCiAgICAgIHRvdGFsLAogICAgICBwYWdlLAogICAgICBsaW1pdCwKICAgICAgdG90YWxQYWdlczogTWF0aC5tYXgoMSwgTWF0aC5jZWlsKHRvdGFsIC8gbGltaXQpKSwKICAgIH0pOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCdQcm9kdWN0IGZldGNoIGZhaWxlZDonLCBlcnJvcik7CiAgICByZXMuc3RhdHVzKDUwMCkuanNvbih7IG1lc3NhZ2U6ICdFcnJvciBmZXRjaGluZyBwcm9kdWN0cycgfSk7CiAgfQp9OwoKY29uc3QgZ2V0UHJvZHVjdEJ5SWQgPSBhc3luYyAocmVxLCByZXMpID0+IHsKICB0cnkgewogICAgY29uc3QgcHJvZHVjdCA9IGF3YWl0IFByb2R1Y3QuZmluZEJ5SWQocmVxLnBhcmFtcy5pZCkucG9wdWxhdGUoJ3NlbGxlcicsICduYW1lIGNvbGxlZ2UnKTsKICAgIGNvbnN0IHJlcXVlc3RlZENhbXB1cyA9IHR5cGVvZiByZXEucXVlcnkuY29sbGVnZSA9PT0gJ3N0cmluZycgPyByZXEucXVlcnkuY29sbGVnZS50cmltKCkgOiAnJzsKICAgIGNvbnN0IGNhbXB1c05hbWUgPSBwcm9jZXNzLmVudi5DQU1QVVNfTkFNRT8udHJpbSgpIHx8IHJlcXVlc3RlZENhbXB1czsKCiAgICBpZiAoIXByb2R1Y3QgfHwgKGNhbXB1c05hbWUgJiYgKCFwcm9kdWN0LmNvbGxlZ2UgfHwgcHJvZHVjdC5jb2xsZWdlLnRvTG93ZXJDYXNlKCkgIT09IGNhbXB1c05hbWUudG9Mb3dlckNhc2UoKSkpKSB7CiAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwNCkuanNvbih7IG1lc3NhZ2U6ICdQcm9kdWN0IG5vdCBmb3VuZCcgfSk7CiAgICB9CgogICAgaWYgKGlzRGVtb1Byb2R1Y3QocHJvZHVjdCkpIHsKICAgICAgY29uc3QgcmVwbGFjZWREZW1vSWRzID0gYXdhaXQgZ2V0UmVwbGFjZWREZW1vSWRzKHByb2R1Y3QuY29sbGVnZSk7CiAgICAgIGlmIChyZXBsYWNlZERlbW9JZHMuc29tZSgoaWQpID0+IGlkLmVxdWFscyhwcm9kdWN0Ll9pZCkpKSB7CiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNDA0KS5qc29uKHsgbWVzc2FnZTogJ1Byb2R1Y3Qgbm90IGZvdW5kJyB9KTsKICAgICAgfQogICAgfQoKICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHByb2R1Y3QpOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICByZXMuc3RhdHVzKGVycm9yLm5hbWUgPT09ICdDYXN0RXJyb3InID8gNDAwIDogNTAwKS5qc29uKHsKICAgICAgbWVzc2FnZTogZXJyb3IubmFtZSA9PT0gJ0Nhc3RFcnJvcicgPyAnSW52YWxpZCBwcm9kdWN0IGlkJyA6ICdFcnJvciBmZXRjaGluZyBwcm9kdWN0JywKICAgIH0pOwogIH0KfTsKCmNvbnN0IHVwZGF0ZVByb2R1Y3QgPSBhc3luYyAocmVxLCByZXMpID0+IHsKICB0cnkgewogICAgY29uc3QgcHJvZHVjdCA9IGF3YWl0IFByb2R1Y3QuZmluZEJ5SWQocmVxLnBhcmFtcy5pZCk7CgogICAgaWYgKCFwcm9kdWN0KSByZXR1cm4gcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBtZXNzYWdlOiAnUHJvZHVjdCBub3QgZm91bmQnIH0pOwogICAgaWYgKHByb2R1Y3Quc2VsbGVyLnRvU3RyaW5nKCkgIT09IHJlcS51c2VyLl9pZC50b1N0cmluZygpKSB7CiAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMykuanNvbih7IG1lc3NhZ2U6ICdOb3QgYXV0aG9yaXplZCB0byB1cGRhdGUgdGhpcyBwcm9kdWN0JyB9KTsKICAgIH0KCiAgICBjb25zdCBlZGl0YWJsZUZpZWxkcyA9IFsndGl0bGUnLCAnZGVzY3JpcHRpb24nLCAnY2F0ZWdvcnknLCAncHJpY2UnLCAnY29uZGl0aW9uJywgJ2xvY2F0aW9uJywgJ3N0YXR1cyddOwogICAgY29uc3QgdXBkYXRlcyA9IE9iamVjdC5mcm9tRW50cmllcygKICAgICAgZWRpdGFibGVGaWVsZHMKICAgICAgICAuZmlsdGVyKChmaWVsZCkgPT4gcmVxLmJvZHlbZmllbGRdICE9PSB1bmRlZmluZWQpCiAgICAgICAgLm1hcCgoZmllbGQpID0+IFtmaWVsZCwgcmVxLmJvZHlbZmllbGRdXSkKICAgICk7CiAgICBpZiAodXBkYXRlcy5zdGF0dXMgPT09ICdhY3RpdmUnKSB7CiAgICAgIHVwZGF0ZXMucHVyY2hhc2VkQnkgPSBudWxsOwogICAgICB1cGRhdGVzLnB1cmNoYXNlUmVxdWVzdGVkQnkgPSBudWxsOwogICAgICB1cGRhdGVzLnB1cmNoYXNlUmVxdWVzdGVkQXQgPSBudWxsOwogICAgfQogICAgY29uc3QgdXBkYXRlZFByb2R1Y3QgPSBhd2FpdCBQcm9kdWN0LmZpbmRCeUlkQW5kVXBkYXRlKHJlcS5wYXJhbXMuaWQsIHVwZGF0ZXMsIHsKICAgICAgbmV3OiB0cnVlLAogICAgICBydW5WYWxpZGF0b3JzOiB0cnVlLAogICAgfSkucG9wdWxhdGUoJ3NlbGxlcicsICduYW1lIGNvbGxlZ2UnKTsKCiAgICByZXMuc3RhdHVzKDIwMCkuanNvbih7IG1lc3NhZ2U6ICdQcm9kdWN0IHVwZGF0ZWQgc3VjY2Vzc2Z1bGx5JywgcHJvZHVjdDogdXBkYXRlZFByb2R1Y3QgfSk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIGNvbnN0IGNsaWVudEVycm9yID0gWydWYWxpZGF0aW9uRXJyb3InLCAnQ2FzdEVycm9yJ10uaW5jbHVkZXMoZXJyb3IubmFtZSk7CiAgICByZXMuc3RhdHVzKGNsaWVudEVycm9yID8gNDAwIDogNTAwKS5qc29uKHsKICAgICAgbWVzc2FnZTogY2xpZW50RXJyb3IgPyAnUGxlYXNlIGNoZWNrIHRoZSB1cGRhdGUgZGV0YWlscycgOiAnRXJyb3IgdXBkYXRpbmcgcHJvZHVjdCcsCiAgICB9KTsKICB9Cn07Cgpjb25zdCByZXF1ZXN0UHVyY2hhc2UgPSBhc3luYyAocmVxLCByZXMpID0+IHsKICB0cnkgewogICAgY29uc3QgbGlzdGluZyA9IGF3YWl0IFByb2R1Y3QuZmluZEJ5SWQocmVxLnBhcmFtcy5pZCk7CiAgICBpZiAoIWxpc3RpbmcpIHJldHVybiByZXMuc3RhdHVzKDQwNCkuanNvbih7IG1lc3NhZ2U6ICdQcm9kdWN0IG5vdCBmb3VuZCcgfSk7CgogICAgY29uc3QgYnV5ZXJJZCA9IHJlcS51c2VyLl9pZC50b1N0cmluZygpOwogICAgY29uc3Qgc2VsbGVySWQgPSBsaXN0aW5nLnNlbGxlci50b1N0cmluZygpOwogICAgaWYgKGJ1eWVySWQgPT09IHNlbGxlcklkKSB7CiAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMykuanNvbih7IG1lc3NhZ2U6ICdZb3UgY2Fubm90IGJ1eSB5b3VyIG93biBsaXN0aW5nJyB9KTsKICAgIH0KCiAgICBjb25zdCBidXllckNhbXB1cyA9IHJlcS51c2VyLmNvbGxlZ2U/LnRyaW0oKS50b0xvd2VyQ2FzZSgpOwogICAgY29uc3QgbGlzdGluZ0NhbXB1cyA9IGxpc3RpbmcuY29sbGVnZT8udHJpbSgpLnRvTG93ZXJDYXNlKCk7CiAgICBpZiAoIWJ1eWVyQ2FtcHVzIHx8ICFsaXN0aW5nQ2FtcHVzIHx8IGJ1eWVyQ2FtcHVzICE9PSBsaXN0aW5nQ2FtcHVzKSB7CiAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMykuanNvbih7IG1lc3NhZ2U6ICdQdXJjaGFzZXMgYXJlIGxpbWl0ZWQgdG8geW91ciBjYW1wdXMgbWFya2V0cGxhY2UnIH0pOwogICAgfQoKICAgIGNvbnN0IGNvbnZlcnNhdGlvbkV4aXN0cyA9IGF3YWl0IE1lc3NhZ2UuZXhpc3RzKHsKICAgICAgcHJvZHVjdDogbGlzdGluZy5faWQsCiAgICAgICRvcjogWwogICAgICAgIHsgc2VuZGVyOiByZXEudXNlci5faWQsIHJlY2VpdmVyOiBsaXN0aW5nLnNlbGxlciB9LAogICAgICAgIHsgc2VuZGVyOiBsaXN0aW5nLnNlbGxlciwgcmVjZWl2ZXI6IHJlcS51c2VyLl9pZCB9LAogICAgICBdLAogICAgfSk7CiAgICBpZiAoIWNvbnZlcnNhdGlvbkV4aXN0cykgewogICAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDMpLmpzb24oeyBtZXNzYWdlOiAnTWVzc2FnZSB0aGUgc2VsbGVyIGJlZm9yZSBjb25maXJtaW5nIHRoaXMgcHVyY2hhc2UnIH0pOwogICAgfQoKICAgIGNvbnN0IHJlcXVlc3RlZExpc3RpbmcgPSBhd2FpdCBQcm9kdWN0LmZpbmRPbmVBbmRVcGRhdGUoCiAgICAgIHsgX2lkOiBsaXN0aW5nLl9pZCwgc3RhdHVzOiAnYWN0aXZlJywgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogbnVsbCB9LAogICAgICB7ICRzZXQ6IHsgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogcmVxLnVzZXIuX2lkLCBwdXJjaGFzZVJlcXVlc3RlZEF0OiBuZXcgRGF0ZSgpIH0gfSwKICAgICAgeyBuZXc6IHRydWUgfQogICAgKTsKICAgIGlmICghcmVxdWVzdGVkTGlzdGluZykgcmV0dXJuIHJlcy5zdGF0dXMoNDA5KS5qc29uKHsgbWVzc2FnZTogJ0EgcHVyY2hhc2UgcmVxdWVzdCBpcyBhbHJlYWR5IHBlbmRpbmcgb3IgdGhpcyBpdGVtIGlzIG5vIGxvbmdlciBhdmFpbGFibGUnIH0pOwoKICAgIHRyeSB7CiAgICAgIGF3YWl0IE1lc3NhZ2UuY3JlYXRlKHsKICAgICAgICBzZW5kZXI6IHJlcS51c2VyLl9pZCwKICAgICAgICByZWNlaXZlcjogbGlzdGluZy5zZWxsZXIsCiAgICAgICAgcHJvZHVjdDogbGlzdGluZy5faWQsCiAgICAgICAgY29udGVudDogJ0kgaGF2ZSBib3VnaHQgdGhpcyBpdGVtLiBQbGVhc2UgcmV2aWV3IGFuZCBjb25maXJtIHRoZSBzYWxlIGZyb20geW91ciBsaXN0aW5ncy4nLAogICAgICB9KTsKICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgIGF3YWl0IFByb2R1Y3QudXBkYXRlT25lKAogICAgICAgIHsgX2lkOiByZXF1ZXN0ZWRMaXN0aW5nLl9pZCwgc3RhdHVzOiAnYWN0aXZlJywgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogcmVxLnVzZXIuX2lkIH0sCiAgICAgICAgeyAkdW5zZXQ6IHsgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogMSwgcHVyY2hhc2VSZXF1ZXN0ZWRBdDogMSB9IH0KICAgICAgKTsKICAgICAgdGhyb3cgZXJyb3I7CiAgICB9CgogICAgcmVzLnN0YXR1cygyMDApLmpzb24oewogICAgICBtZXNzYWdlOiAnUHVyY2hhc2UgcmVxdWVzdCBzZW50LiBUaGUgbGlzdGluZyB3aWxsIHJlbWFpbiBhdmFpbGFibGUgdW50aWwgdGhlIHNlbGxlciBjb25maXJtcyB0aGUgc2FsZS4nLAogICAgICBwcm9kdWN0OiByZXF1ZXN0ZWRMaXN0aW5nLAogICAgfSk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIGlmIChlcnJvci5uYW1lID09PSAnQ2FzdEVycm9yJykgcmV0dXJuIHJlcy5zdGF0dXMoNDAwKS5qc29uKHsgbWVzc2FnZTogJ0ludmFsaWQgcHJvZHVjdCBpZCcgfSk7CiAgICBjb25zb2xlLmVycm9yKCdQdXJjaGFzZSByZXF1ZXN0IGZhaWxlZDonLCBlcnJvcik7CiAgICByZXMuc3RhdHVzKDUwMCkuanNvbih7IG1lc3NhZ2U6ICdDb3VsZCBub3Qgc2VuZCB0aGUgcHVyY2hhc2UgcmVxdWVzdC4gUGxlYXNlIHRyeSBhZ2Fpbi4nIH0pOwogIH0KfTsKCmNvbnN0IGNvbmZpcm1TYWxlID0gYXN5bmMgKHJlcSwgcmVzKSA9PiB7CiAgdHJ5IHsKICAgIGNvbnN0IGxpc3RpbmcgPSBhd2FpdCBQcm9kdWN0LmZpbmRCeUlkKHJlcS5wYXJhbXMuaWQpOwogICAgaWYgKCFsaXN0aW5nKSByZXR1cm4gcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBtZXNzYWdlOiAnUHJvZHVjdCBub3QgZm91bmQnIH0pOwogICAgaWYgKGxpc3Rpbmcuc2VsbGVyLnRvU3RyaW5nKCkgIT09IHJlcS51c2VyLl9pZC50b1N0cmluZygpKSB7CiAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMykuanNvbih7IG1lc3NhZ2U6ICdPbmx5IHRoZSBzZWxsZXIgY2FuIGNvbmZpcm0gdGhpcyBzYWxlJyB9KTsKICAgIH0KICAgIGlmIChsaXN0aW5nLnN0YXR1cyAhPT0gJ2FjdGl2ZScgfHwgIWxpc3RpbmcucHVyY2hhc2VSZXF1ZXN0ZWRCeSkgewogICAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDkpLmpzb24oeyBtZXNzYWdlOiAnVGhlcmUgaXMgbm8gcGVuZGluZyBwdXJjaGFzZSByZXF1ZXN0IGZvciB0aGlzIGxpc3RpbmcnIH0pOwogICAgfQoKICAgIGNvbnN0IGJ1eWVySWQgPSBsaXN0aW5nLnB1cmNoYXNlUmVxdWVzdGVkQnk7CiAgICBjb25zdCBzb2xkTGlzdGluZyA9IGF3YWl0IFByb2R1Y3QuZmluZE9uZUFuZFVwZGF0ZSgKICAgICAgeyBfaWQ6IGxpc3RpbmcuX2lkLCBzdGF0dXM6ICdhY3RpdmUnLCBwdXJjaGFzZVJlcXVlc3RlZEJ5OiBidXllcklkIH0sCiAgICAgIHsKICAgICAgICAkc2V0OiB7IHN0YXR1czogJ3NvbGQnLCBwdXJjaGFzZWRCeTogYnV5ZXJJZCB9LAogICAgICAgICR1bnNldDogeyBwdXJjaGFzZVJlcXVlc3RlZEJ5OiAxLCBwdXJjaGFzZVJlcXVlc3RlZEF0OiAxIH0sCiAgICAgIH0sCiAgICAgIHsgbmV3OiB0cnVlIH0KICAgICk7CiAgICBpZiAoIXNvbGRMaXN0aW5nKSByZXR1cm4gcmVzLnN0YXR1cyg0MDkpLmpzb24oeyBtZXNzYWdlOiAnVGhlIHBlbmRpbmcgcHVyY2hhc2UgcmVxdWVzdCBoYXMgY2hhbmdlZC4gUmVmcmVzaCB5b3VyIGxpc3RpbmdzLicgfSk7CgogICAgdHJ5IHsKICAgICAgYXdhaXQgTWVzc2FnZS5jcmVhdGUoewogICAgICAgIHNlbmRlcjogcmVxLnVzZXIuX2lkLAogICAgICAgIHJlY2VpdmVyOiBidXllcklkLAogICAgICAgIHByb2R1Y3Q6IGxpc3RpbmcuX2lkLAogICAgICAgIGNvbnRlbnQ6ICdUaGUgc2VsbGVyIGNvbmZpcm1lZCB0aGUgc2FsZS4gVGhpcyBpdGVtIGlzIG5vdyBtYXJrZWQgYXMgc29sZC4nLAogICAgICB9KTsKICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgIGF3YWl0IFByb2R1Y3QudXBkYXRlT25lKAogICAgICAgIHsgX2lkOiBzb2xkTGlzdGluZy5faWQsIHN0YXR1czogJ3NvbGQnLCBwdXJjaGFzZWRCeTogYnV5ZXJJZCB9LAogICAgICAgIHsKICAgICAgICAgICRzZXQ6IHsgc3RhdHVzOiAnYWN0aXZlJywgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogYnV5ZXJJZCB9LAogICAgICAgICAgJHVuc2V0OiB7IHB1cmNoYXNlZEJ5OiAxIH0sCiAgICAgICAgfQogICAgICApOwogICAgICB0aHJvdyBlcnJvcjsKICAgIH0KCiAgICByZXMuc3RhdHVzKDIwMCkuanNvbih7IG1lc3NhZ2U6ICdTYWxlIGNvbmZpcm1lZC4gVGhlIGxpc3RpbmcgaXMgbm93IHNvbGQuJywgcHJvZHVjdDogc29sZExpc3RpbmcgfSk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIGlmIChlcnJvci5uYW1lID09PSAnQ2FzdEVycm9yJykgcmV0dXJuIHJlcy5zdGF0dXMoNDAwKS5qc29uKHsgbWVzc2FnZTogJ0ludmFsaWQgcHJvZHVjdCBpZCcgfSk7CiAgICBjb25zb2xlLmVycm9yKCdTYWxlIGNvbmZpcm1hdGlvbiBmYWlsZWQ6JywgZXJyb3IpOwogICAgcmVzLnN0YXR1cyg1MDApLmpzb24oeyBtZXNzYWdlOiAnQ291bGQgbm90IGNvbmZpcm0gdGhpcyBzYWxlLiBQbGVhc2UgdHJ5IGFnYWluLicgfSk7CiAgfQp9OwoKY29uc3QgZGVsZXRlUHJvZHVjdCA9IGFzeW5jIChyZXEsIHJlcykgPT4gewogIHRyeSB7CiAgICBjb25zdCBwcm9kdWN0ID0gYXdhaXQgUHJvZHVjdC5maW5kQnlJZChyZXEucGFyYW1zLmlkKTsKCiAgICBpZiAoIXByb2R1Y3QpIHJldHVybiByZXMuc3RhdHVzKDQwNCkuanNvbih7IG1lc3NhZ2U6ICdQcm9kdWN0IG5vdCBmb3VuZCcgfSk7CiAgICBpZiAocHJvZHVjdC5zZWxsZXIudG9TdHJpbmcoKSAhPT0gcmVxLnVzZXIuX2lkLnRvU3RyaW5nKCkpIHsKICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNDAzKS5qc29uKHsgbWVzc2FnZTogJ05vdCBhdXRob3JpemVkIHRvIGRlbGV0ZSB0aGlzIHByb2R1Y3QnIH0pOwogICAgfQoKICAgIGF3YWl0IHByb2R1Y3QuZGVsZXRlT25lKCk7CiAgICByZXMuc3RhdHVzKDIwMCkuanNvbih7IG1lc3NhZ2U6ICdQcm9kdWN0IGRlbGV0ZWQgc3VjY2Vzc2Z1bGx5JyB9KTsKICB9IGNhdGNoIChlcnJvcikgewogICAgcmVzLnN0YXR1cyhlcnJvci5uYW1lID09PSAnQ2FzdEVycm9yJyA/IDQwMCA6IDUwMCkuanNvbih7CiAgICAgIG1lc3NhZ2U6IGVycm9yLm5hbWUgPT09ICdDYXN0RXJyb3InID8gJ0ludmFsaWQgcHJvZHVjdCBpZCcgOiAnRXJyb3IgZGVsZXRpbmcgcHJvZHVjdCcsCiAgICB9KTsKICB9Cn07Cgpjb25zdCBnZXRNeVByb2R1Y3RzID0gYXN5bmMgKHJlcSwgcmVzKSA9PiB7CiAgdHJ5IHsKICAgIGNvbnN0IHByb2R1Y3RzID0gYXdhaXQgUHJvZHVjdC5maW5kKHsgc2VsbGVyOiByZXEudXNlci5faWQgfSkKICAgICAgLnBvcHVsYXRlKCdzZWxsZXInLCAnbmFtZSBjb2xsZWdlJykKICAgICAgLnBvcHVsYXRlKCdwdXJjaGFzZVJlcXVlc3RlZEJ5JywgJ25hbWUnKQogICAgICAuc29ydCh7IGNyZWF0ZWRBdDogLTEgfSk7CiAgICByZXMuc3RhdHVzKDIwMCkuanNvbihwcm9kdWN0cyk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ1NlbGxlciBsaXN0aW5ncyBmZXRjaCBmYWlsZWQ6JywgZXJyb3IpOwogICAgcmVzLnN0YXR1cyg1MDApLmpzb24oeyBtZXNzYWdlOiAnRXJyb3IgZmV0Y2hpbmcgeW91ciBwcm9kdWN0cycgfSk7CiAgfQp9OwoKbW9kdWxlLmV4cG9ydHMgPSB7CiAgY3JlYXRlUHJvZHVjdCwKICBnZXRQcm9kdWN0cywKICBnZXRQcm9kdWN0QnlJZCwKICB1cGRhdGVQcm9kdWN0LAogIHJlcXVlc3RQdXJjaGFzZSwKICBjb25maXJtU2FsZSwKICBkZWxldGVQcm9kdWN0LAogIGdldE15UHJvZHVjdHMsCn07Cg==
+const fs = require('fs/promises');
+const Product = require('../models/Product');
+const Message = require('../models/Message');
+const { parsePagination } = require('../utils/pagination');
+const { cloudinary, hasCloudinaryConfig } = require('../config/cloudinary');
+
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const demoTitlePattern = /^LocalKart Demo \d+:/i;
+const isDemoProduct = (product) => product.isDemo === true || demoTitlePattern.test(product.title);
+const removeLocalUploads = async (files) => {
+  await Promise.all((files || []).map(async (file) => {
+    try {
+      await fs.unlink(file.path);
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }));
+};
+
+const getReplacedDemoIds = async (campusName) => {
+  const campusFilter = campusName
+    ? { college: new RegExp(`^${escapeRegex(campusName)}$`, 'i') }
+    : {};
+  const [realCounts, demoProducts] = await Promise.all([
+    Product.aggregate([
+      {
+        $match: {
+          ...campusFilter,
+          status: 'active',
+          isDemo: { $ne: true },
+          title: { $not: demoTitlePattern },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            college: { $toLower: '$college' },
+            category: '$category',
+          },
+          count: { $sum: 1 },
+        },
+      },
+    ]),
+    Product.find({
+      ...campusFilter,
+      status: 'active',
+      $or: [{ isDemo: true }, { title: demoTitlePattern }],
+    }).sort({ college: 1, category: 1, createdAt: 1, _id: 1 }).select('_id college category'),
+  ]);
+
+  const remainingByCampusCategory = new Map();
+
+  for (const { _id, count } of realCounts) {
+    const categoryKey = JSON.stringify([String(_id.college || '').toLowerCase(), _id.category]);
+    remainingByCampusCategory.set(categoryKey, count);
+  }
+
+  const replacedIds = new Set();
+  for (const product of demoProducts) {
+    const categoryKey = JSON.stringify([String(product.college || '').toLowerCase(), product.category]);
+    const categoryRemaining = remainingByCampusCategory.get(categoryKey) || 0;
+    if (!categoryRemaining) continue;
+
+    replacedIds.add(product._id.toString());
+    remainingByCampusCategory.set(categoryKey, categoryRemaining - 1);
+  }
+
+  return demoProducts
+    .filter((product) => replacedIds.has(product._id.toString()))
+    .map((product) => product._id);
+};
+
+const createProduct = async (req, res) => {
+  try {
+    const { title, description, category, price, condition, location } = req.body;
+    const cleanTitle = typeof title === 'string' ? title.trim() : '';
+    const cleanDescription = typeof description === 'string' ? description.trim() : '';
+    const cleanCategory = typeof category === 'string' ? category.trim() : '';
+    const priceValue = Number(price);
+
+    if (
+      !cleanTitle
+      || cleanTitle.length > 120
+      || !cleanDescription
+      || cleanDescription.length > 3000
+      || !cleanCategory
+      || price === undefined
+      || price === null
+      || price === ''
+      || !Number.isFinite(priceValue)
+      || priceValue < 0
+      || (location !== undefined && typeof location !== 'string')
+      || (typeof location === 'string' && location.trim().length > 160)
+    ) {
+      await removeLocalUploads(req.files);
+      return res.status(400).json({ message: 'Please provide a title, description, category and valid price' });
+    }
+
+    const imageUrls = (req.files || []).map((file) => `/uploads/${encodeURIComponent(file.filename)}`);
+    if (hasCloudinaryConfig && req.files?.length) {
+      for (const [index, file] of req.files.entries()) {
+        try {
+          const result = await cloudinary.uploader.upload(file.path, { folder: 'localkart/products' });
+          imageUrls[index] = result.secure_url;
+        } catch (error) {
+          console.error('Cloudinary upload failed; retaining the local image:', error.message);
+        }
+      }
+    }
+
+    const product = await Product.create({
+      title: cleanTitle,
+      description: cleanDescription,
+      category: cleanCategory,
+      price: priceValue,
+      condition: condition || 'Good',
+      location: typeof location === 'string' ? location.trim() : '',
+      images: imageUrls,
+      seller: req.user._id,
+      college: process.env.CAMPUS_NAME?.trim() || req.user.college,
+    });
+
+    res.status(201).json({
+      message: 'Product created successfully',
+      product: await product.populate('seller', 'name college'),
+    });
+  } catch (error) {
+    console.error('Product creation failed:', error);
+    try {
+      await removeLocalUploads(req.files);
+    } catch (cleanupError) {
+      console.error('Uploaded image cleanup failed:', cleanupError);
+    }
+    res.status(error.name === 'ValidationError' ? 400 : 500).json({
+      message: error.name === 'ValidationError' ? 'Please check the listing details' : 'Product creation failed',
+    });
+  }
+};
+
+const getProducts = async (req, res) => {
+  try {
+    const { category, minPrice, maxPrice, status } = req.query;
+    const filter = { status: status === 'sold' ? 'sold' : 'active' };
+    const requestedCampus = typeof req.query.college === 'string' ? req.query.college.trim() : '';
+    const campusName = process.env.CAMPUS_NAME?.trim() || requestedCampus;
+
+    if (campusName) filter.college = new RegExp(`^${escapeRegex(campusName)}$`, 'i');
+
+    if (typeof category === 'string' && category !== 'All') {
+      filter.category = new RegExp(`^${escapeRegex(category.trim())}$`, 'i');
+    }
+
+    if (minPrice || maxPrice) {
+      filter.price = {};
+      if (minPrice && Number.isFinite(Number(minPrice))) filter.price.$gte = Number(minPrice);
+      if (maxPrice && Number.isFinite(Number(maxPrice))) filter.price.$lte = Number(maxPrice);
+    }
+
+    // `q` is the documented search param; `search` stays as a legacy alias.
+    const searchTerm = typeof req.query.q === 'string' && req.query.q.trim()
+      ? req.query.q
+      : req.query.search;
+    if (typeof searchTerm === 'string' && searchTerm.trim()) {
+      const term = new RegExp(escapeRegex(searchTerm.trim()), 'i');
+      filter.$or = [{ title: term }, { description: term }, { category: term }];
+    }
+
+    const replacedDemoIds = await getReplacedDemoIds(campusName);
+    if (replacedDemoIds.length) filter._id = { $nin: replacedDemoIds };
+
+    // Paginated shape only when the caller asks for it (page/limit/q);
+    // otherwise the historic bare-array response is returned unchanged,
+    // so the existing frontend keeps working.
+    const wantsPage = req.query.page !== undefined || req.query.limit !== undefined || req.query.q !== undefined;
+    if (!wantsPage) {
+      const products = await Product.find(filter)
+        .populate('seller', 'name college')
+        .sort({ createdAt: -1 });
+      return res.status(200).json(products);
+    }
+
+    const { page, limit, skip } = parsePagination(req.query);
+    const [total, products] = await Promise.all([
+      Product.countDocuments(filter),
+      Product.find(filter)
+        .populate('seller', 'name college')
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit),
+    ]);
+    res.status(200).json({
+      products,
+      total,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(total / limit)),
+    });
+  } catch (error) {
+    console.error('Product fetch failed:', error);
+    res.status(500).json({ message: 'Error fetching products' });
+  }
+};
+
+const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id).populate('seller', 'name college');
+    const requestedCampus = typeof req.query.college === 'string' ? req.query.college.trim() : '';
+    const campusName = process.env.CAMPUS_NAME?.trim() || requestedCampus;
+
+    if (!product || (campusName && (!product.college || product.college.toLowerCase() !== campusName.toLowerCase()))) {
+      return res.status(404).json({ message: 'Product not found' });
+    }
+
+    if (isDemoProduct(product)) {
+      const replacedDemoIds = await getReplacedDemoIds(product.college);
+      if (replacedDemoIds.some((id) => id.equals(product._id))) {
+        return res.status(404).json({ message: 'Product not found' });
+      }
+    }
+
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(error.name === 'CastError' ? 400 : 500).json({
+      message: error.name === 'CastError' ? 'Invalid product id' : 'Error fetching product',
+    });
+  }
+};
+
+const updateProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+
+    if (!product) return res.status(404).json({ message: 'Product not found' });
+    if (product.seller.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: 'Not authorized to update this product' });
+    }
+
+    const editableFields = ['title', 'description', 'category', 'price', 'condition', 'location', 'status'];
+    const updates = Object.fromEntries(
+      editableFields
+        .filter((field) => req.body[field] !== undefined)
+        .map((field) => [field, req.body[field]])
+    );
+    if (updates.status === 'active') {
+      updates.purchasedBy = null;
+      updates.purchaseRequestedBy = null;
+      updates.purchaseRequestedAt = null;
+    }
+    const updatedProduct = await Product.findByIdAndUpdate(req.params.id, updates, {
+      new: true,
+      runValidators: true,
+    }).populate('seller', 'name college');
+
+    res.status(200).json({ message: 'Product updated successfully', product: updatedProduct });
+  } catch (error) {
+    const clientError = ['ValidationError', 'CastError'].includes(error.name);
+    res.status(clientError ? 400 : 500).json({
+      message: clientError ? 'Please check the update details' : 'Error updating product',
+    });
+  }
+};
+
+const requestPurchase = async (req, res) => {
+  try {
+    const listing = await Product.findById(req.params.id);
+    if (!listing) return res.status(404).json({ message: 'Product not found' });
+
+    const buyerId = req.user._id.toString();
+    const sellerId = listing.seller.toString();
+    if (buyerId === sellerId) {
+      return res.status(403).json({ message: 'You cannot buy your own listing' });
+    }
+
+    const buyerCampus = req.user.college?.trim().toLowerCase();
+    const listingCampus = listing.college?.trim().toLowerCase();
+    if (!buyerCampus || !listingCampus || buyerCampus !== listingCampus) {
+      return res.status(403).json({ message: 'Purchases are limited to your campus marketplace' });
+    }
+
+    const conversationExists = await Message.exists({
+      product: listing._id,
+      $or: [
+        { sender: req.user._id, receiver: listing.seller },
+        { sender: listing.seller, receiver: req.user._id },
+      ],
+    });
+    if (!conversationExists) {
+      return res.status(403).json({ message: 'Message the seller before confirming this purchase' });
+    }
+
+    const requestedListing = await Product.findOneAndUpdate(
+      { _id: listing._id, status: 'active', purchaseRequestedBy: null },
+      { $set: { purchaseRequestedBy: req.user._id, purchaseRequestedAt: new Date() } },
+      { new: true }
+    );
+    if (!requestedListing) return res.status(409).json({ message: 'A purchase request is already pending or this item is no longer available' });
+
+    try {
+      await Message.create({
+        sender: req.user._id,
+        receiver: listing.seller,
+        product: listing._id,
+        content: 'I have bought this item. Please review and confirm the sale from your listings.',
+      });
+    } catch (error) {
+      await Product.updateOne(
+        { _id: requestedListing._id, status: 'active', purchaseRequestedBy: req.user._id },
+        { $unset: { purchaseRequestedBy: 1, purchaseRequestedAt: 1 } }
+      );
+      throw error;
+    }
+
+    res.status(200).json({
+      message: 'Purchase request sent. The listing will remain available until the seller confirms the sale.',
+      product: requestedListing,
+    });
+  } catch (error) {
+    if (error.name === 'CastError') return res.status(400).json({ message: 'Invalid product id' });
+    console.error('Purchase request failed:', error);
+    res.status(500).json({ message: 'Could not send the purchase request. Please try again.' });
+  }
+};
+
+const confirmSale = async (req, res) => {
+  try {
+    const listing = await Product.findById(req.params.id);
+    if (!listing) return res.status(404).json({ message: 'Product not found' });
+    if (listing.seller.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: 'Only the seller can confirm this sale' });
+    }
+    if (listing.status !== 'active' || !listing.purchaseRequestedBy) {
+      return res.status(409).json({ message: 'There is no pending purchase request for this listing' });
+    }
+
+    const buyerId = listing.purchaseRequestedBy;
+    const soldListing = await Product.findOneAndUpdate(
+      { _id: listing._id, status: 'active', purchaseRequestedBy: buyerId },
+      {
+        $set: { status: 'sold', purchasedBy: buyerId },
+        $unset: { purchaseRequestedBy: 1, purchaseRequestedAt: 1 },
+      },
+      { new: true }
+    );
+    if (!soldListing) return res.status(409).json({ message: 'The pending purchase request has changed. Refresh your listings.' });
+
+    try {
+      await Message.create({
+        sender: req.user._id,
+        receiver: buyerId,
+        product: listing._id,
+        content: 'The seller confirmed the sale. This item is now marked as sold.',
+      });
+    } catch (error) {
+      await Product.updateOne(
+        { _id: soldListing._id, status: 'sold', purchasedBy: buyerId },
+        {
+          $set: { status: 'active', purchaseRequestedBy: buyerId },
+          $unset: { purchasedBy: 1 },
+        }
+      );
+      throw error;
+    }
+
+    res.status(200).json({ message: 'Sale confirmed. The listing is now sold.', product: soldListing });
+  } catch (error) {
+    if (error.name === 'CastError') return res.status(400).json({ message: 'Invalid product id' });
+    console.error('Sale confirmation failed:', error);
+    res.status(500).json({ message: 'Could not confirm this sale. Please try again.' });
+  }
+};
+
+const deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+
+    if (!product) return res.status(404).json({ message: 'Product not found' });
+    if (product.seller.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: 'Not authorized to delete this product' });
+    }
+
+    await product.deleteOne();
+    res.status(200).json({ message: 'Product deleted successfully' });
+  } catch (error) {
+    res.status(error.name === 'CastError' ? 400 : 500).json({
+      message: error.name === 'CastError' ? 'Invalid product id' : 'Error deleting product',
+    });
+  }
+};
+
+const getMyProducts = async (req, res) => {
+  try {
+    const products = await Product.find({ seller: req.user._id })
+      .populate('seller', 'name college')
+      .populate('purchaseRequestedBy', 'name')
+      .sort({ createdAt: -1 });
+    res.status(200).json(products);
+  } catch (error) {
+    console.error('Seller listings fetch failed:', error);
+    res.status(500).json({ message: 'Error fetching your products' });
+  }
+};
+
+module.exports = {
+  createProduct,
+  getProducts,
+  getProductById,
+  updateProduct,
+  requestPurchase,
+  confirmSale,
+  deleteProduct,
+  getMyProducts,
+};

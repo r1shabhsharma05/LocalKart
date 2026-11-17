@@ -1,1 +1,85 @@
-Y29uc3QgbW9uZ29vc2UgPSByZXF1aXJlKCdtb25nb29zZScpOwoKY29uc3QgcHJvZHVjdFNjaGVtYSA9IG5ldyBtb25nb29zZS5TY2hlbWEoCiAgewogICAgdGl0bGU6IHsKICAgICAgdHlwZTogU3RyaW5nLAogICAgICByZXF1aXJlZDogdHJ1ZSwKICAgICAgdHJpbTogdHJ1ZSwKICAgIH0sCiAgICBkZXNjcmlwdGlvbjogewogICAgICB0eXBlOiBTdHJpbmcsCiAgICAgIHJlcXVpcmVkOiB0cnVlLAogICAgICB0cmltOiB0cnVlLAogICAgfSwKICAgIGNhdGVnb3J5OiB7CiAgICAgIHR5cGU6IFN0cmluZywKICAgICAgcmVxdWlyZWQ6IHRydWUsCiAgICAgIGVudW06IFsKICAgICAgICAnTW9iaWxlcycsICdMYXB0b3BzJywgJ0F1ZGlvJywgJ0FjY2Vzc29yaWVzJywgJ0Jvb2tzJywgJ0N5Y2xlcycsCiAgICAgICAgJ0Z1cm5pdHVyZScsICdTdHVkeSBNYXRlcmlhbHMnLCAnR2FkZ2V0cycsICdFbGVjdHJvbmljcycsICdDbG90aGVzJywgJ090aGVycycsCiAgICAgIF0sCiAgICB9LAogICAgcHJpY2U6IHsKICAgICAgdHlwZTogTnVtYmVyLAogICAgICByZXF1aXJlZDogdHJ1ZSwKICAgICAgbWluOiAwLAogICAgfSwKICAgIGNvbmRpdGlvbjogewogICAgICB0eXBlOiBTdHJpbmcsCiAgICAgIGVudW06IFsnTGlrZSBOZXcnLCAnRXhjZWxsZW50JywgJ0dvb2QnLCAnQXZlcmFnZSddLAogICAgICBkZWZhdWx0OiAnR29vZCcsCiAgICB9LAogICAgaW1hZ2VzOiBbewogICAgICB0eXBlOiBTdHJpbmcsCiAgICAgIGRlZmF1bHQ6IFtdLAogICAgfV0sCiAgICBzdGF0dXM6IHsKICAgICAgdHlwZTogU3RyaW5nLAogICAgICBlbnVtOiBbJ2FjdGl2ZScsICdzb2xkJ10sCiAgICAgIGRlZmF1bHQ6ICdhY3RpdmUnLAogICAgfSwKICAgIGlzRGVtbzogewogICAgICB0eXBlOiBCb29sZWFuLAogICAgICBkZWZhdWx0OiBmYWxzZSwKICAgIH0sCiAgICBzZWxsZXI6IHsKICAgICAgdHlwZTogbW9uZ29vc2UuU2NoZW1hLlR5cGVzLk9iamVjdElkLAogICAgICByZWY6ICdVc2VyJywKICAgICAgcmVxdWlyZWQ6IHRydWUsCiAgICB9LAogICAgcHVyY2hhc2VSZXF1ZXN0ZWRCeTogewogICAgICB0eXBlOiBtb25nb29zZS5TY2hlbWEuVHlwZXMuT2JqZWN0SWQsCiAgICAgIHJlZjogJ1VzZXInLAogICAgICBkZWZhdWx0OiBudWxsLAogICAgfSwKICAgIHB1cmNoYXNlUmVxdWVzdGVkQXQ6IHsKICAgICAgdHlwZTogRGF0ZSwKICAgICAgZGVmYXVsdDogbnVsbCwKICAgIH0sCiAgICBwdXJjaGFzZWRCeTogewogICAgICB0eXBlOiBtb25nb29zZS5TY2hlbWEuVHlwZXMuT2JqZWN0SWQsCiAgICAgIHJlZjogJ1VzZXInLAogICAgICBkZWZhdWx0OiBudWxsLAogICAgfSwKICAgIGNvbGxlZ2U6IHsKICAgICAgdHlwZTogU3RyaW5nLAogICAgICByZXF1aXJlZDogdHJ1ZSwKICAgICAgdHJpbTogdHJ1ZSwKICAgIH0sCiAgICBsb2NhdGlvbjogewogICAgICB0eXBlOiBTdHJpbmcsCiAgICAgIGRlZmF1bHQ6ICcnLAogICAgICB0cmltOiB0cnVlLAogICAgfSwKICB9LAogIHsKICAgIHRpbWVzdGFtcHM6IHRydWUsCiAgfQopOwoKLy8gVGhlIGxpc3QgZmlsdGVyIGlzIGFsd2F5cyBzdGF0dXMgKyBjYXRlZ29yeSwgbmV3ZXN0IGZpcnN0IOKAlCB3aXRob3V0IHRoaXMKLy8gdGhlIHF1ZXJ5IGNvbGxlY3Rpb24tc2NhbnMgb25jZSBsaXN0aW5ncyBncm93IHBhc3QgYSBmZXcgaHVuZHJlZC4KcHJvZHVjdFNjaGVtYS5pbmRleCh7IHN0YXR1czogMSwgY2F0ZWdvcnk6IDEsIGNyZWF0ZWRBdDogLTEgfSk7Cgptb2R1bGUuZXhwb3J0cyA9IG1vbmdvb3NlLm1vZGVsKCdQcm9kdWN0JywgcHJvZHVjdFNjaGVtYSk7Cg==
+const mongoose = require('mongoose');
+
+const productSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    description: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    category: {
+      type: String,
+      required: true,
+      enum: [
+        'Mobiles', 'Laptops', 'Audio', 'Accessories', 'Books', 'Cycles',
+        'Furniture', 'Study Materials', 'Gadgets', 'Electronics', 'Clothes', 'Others',
+      ],
+    },
+    price: {
+      type: Number,
+      required: true,
+      min: 0,
+    },
+    condition: {
+      type: String,
+      enum: ['Like New', 'Excellent', 'Good', 'Average'],
+      default: 'Good',
+    },
+    images: [{
+      type: String,
+      default: [],
+    }],
+    status: {
+      type: String,
+      enum: ['active', 'sold'],
+      default: 'active',
+    },
+    isDemo: {
+      type: Boolean,
+      default: false,
+    },
+    seller: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    purchaseRequestedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null,
+    },
+    purchaseRequestedAt: {
+      type: Date,
+      default: null,
+    },
+    purchasedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null,
+    },
+    college: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    location: {
+      type: String,
+      default: '',
+      trim: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+// The list filter is always status + category, newest first — without this
+// the query collection-scans once listings grow past a few hundred.
+productSchema.index({ status: 1, category: 1, createdAt: -1 });
+
+module.exports = mongoose.model('Product', productSchema);

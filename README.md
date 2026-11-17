@@ -31,9 +31,7 @@
 
 ## ✅ Tests & CI
 
-[![CI](https://github.com/r1shabhsharma05/LocalKart/actions/workflows/ci.yml/badge.svg)](https://github.com/r1shabhsharma05/LocalKart/actions/workflows/ci.yml)
-
-Every push runs GitHub Actions (`.github/workflows/ci.yml`): backend tests, frontend tests + build, and a Playwright smoke test against the live site. A failing test fails the build.
+Every push runs GitHub Actions (`.github/workflows/ci.yml`): backend tests, frontend tests + build. A failing test fails the build. The Playwright smoke test is not in CI — it runs locally against the live site (the Render free cold start makes it flaky in CI).
 
 ```bash
 npm --prefix backend test    # 20 tests: auth (signup, OTP verify, login, wrong-OTP lockout, CSRF), products (create, list, filter, pagination, search, sell flow), messages, error handling
@@ -41,7 +39,7 @@ npm --prefix frontend test   # 16 tests: homepage rails/filtering, image crop, l
 npx --prefix frontend playwright test   # public flow on the live site: listings load → search → open a listing; plus a 390px no-overflow check
 ```
 
-Measured 2026-11-17: **20 backend + 16 frontend tests passing, E2E 2/2 green locally.** CI is configured (`.github/workflows/ci.yml`); its first run happens on the next push — do not claim "CI green" until that run passes. API docs: [`API.md`](API.md). No Redis, no TypeScript, no payments — none of those are in this repo, and none are claimed.
+Measured 2026-11-17: **20 backend + 16 frontend tests passing, E2E 2/2 green locally.** CI (`.github/workflows/ci.yml`) landed 2026-11-17 in the follow-up to the flagship pass — its first run is the merge of that PR, so do not claim "CI green" until that run passes; check the [Actions tab](https://github.com/r1shabhsharma05/LocalKart/actions). API docs: [`API.md`](API.md). No Redis, no TypeScript, no payments — none of those are in this repo, and none are claimed.
 
 Lighthouse on the homepage (local production build, 1 seeded listing, 2026-11-17): **Performance 83, Accessibility 100, Best Practices 96, SEO 92** (before fixes: 82 / 94 / 92 / 83 — the fixes were a meta description, footer heading order, hero contrast, and unblocking Google Fonts in the CSP). A live-site Lighthouse run is still owed — it needs a machine with direct browser internet access.
 

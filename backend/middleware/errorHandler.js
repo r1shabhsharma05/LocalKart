@@ -1,1 +1,19 @@
-Ly8gT25lIGVycm9yLWhhbmRsaW5nIG1pZGRsZXdhcmUgZm9yIHRoZSB3aG9sZSBBUEkuIENsaWVudCBlcnJvcnMga2VlcAovLyB0aGVpciBtZXNzYWdlOyBzZXJ2ZXIgZXJyb3JzIHJldHVybiBhIGdlbmVyaWMgbWVzc2FnZSDigJQgYSBzdGFjayB0cmFjZQovLyBvciBpbnRlcm5hbCBkZXRhaWwgbXVzdCBuZXZlciByZWFjaCB0aGUgY2xpZW50Lgpjb25zdCBlcnJvckhhbmRsZXIgPSAoZXJyLCByZXEsIHJlcywgbmV4dCkgPT4gewogIGNvbnNvbGUuZXJyb3IoZXJyLnN0YWNrKTsKICBjb25zdCBzdGF0dXMgPSBOdW1iZXIoZXJyLnN0YXR1cyB8fCBlcnIuc3RhdHVzQ29kZSk7CiAgY29uc3QgaXNDbGllbnRFcnJvciA9IHN0YXR1cyA+PSA0MDAgJiYgc3RhdHVzIDwgNTAwOwogIGNvbnN0IGlzVXBsb2FkRXJyb3IgPSBlcnIubmFtZSA9PT0gJ011bHRlckVycm9yJzsKICAvLyBCb2R5LXBhcnNlciBmYWlsdXJlcyBjYXJyeSBubyBzdGF0dXMsIGJ1dCB0aGV5IGFyZSBjbGllbnQgZXJyb3JzIHRvby4KICBjb25zdCBpc0JhZEpzb24gPSBlcnIudHlwZSA9PT0gJ2VudGl0eS5wYXJzZS5mYWlsZWQnOwogIGNvbnN0IHJlc3BvbnNlU3RhdHVzID0gaXNDbGllbnRFcnJvciB8fCBpc1VwbG9hZEVycm9yIHx8IGlzQmFkSnNvbiA/IDQwMCA6IDUwMDsKICBjb25zdCBtZXNzYWdlID0gcmVzcG9uc2VTdGF0dXMgPT09IDQwMAogICAgPyAoaXNCYWRKc29uID8gJ0ludmFsaWQgSlNPTiByZXF1ZXN0IGJvZHknIDogZXJyLm1lc3NhZ2UgfHwgJ0ludmFsaWQgcmVxdWVzdCBkYXRhJykKICAgIDogJ1NvbWV0aGluZyB3ZW50IHdyb25nJzsKCiAgcmVzLnN0YXR1cyhyZXNwb25zZVN0YXR1cykuanNvbih7IG1lc3NhZ2UgfSk7Cn07Cgptb2R1bGUuZXhwb3J0cyA9IGVycm9ySGFuZGxlcjsK
+// One error-handling middleware for the whole API. Client errors keep
+// their message; server errors return a generic message — a stack trace
+// or internal detail must never reach the client.
+const errorHandler = (err, req, res, next) => {
+  console.error(err.stack);
+  const status = Number(err.status || err.statusCode);
+  const isClientError = status >= 400 && status < 500;
+  const isUploadError = err.name === 'MulterError';
+  // Body-parser failures carry no status, but they are client errors too.
+  const isBadJson = err.type === 'entity.parse.failed';
+  const responseStatus = isClientError || isUploadError || isBadJson ? 400 : 500;
+  const message = responseStatus === 400
+    ? (isBadJson ? 'Invalid JSON request body' : err.message || 'Invalid request data')
+    : 'Something went wrong';
+
+  res.status(responseStatus).json({ message });
+};
+
+module.exports = errorHandler;

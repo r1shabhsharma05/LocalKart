@@ -312,7 +312,7 @@ export default function HomePage() {
             <h2 id="marketplace-title">{search ? 'Search results' : 'Campus marketplace'}</h2>
           </div>
           <span className="listing-count">
-            {visibleProductCount} {visibleProductCount === 1 ? 'item' : 'items'}
+            {loading ? 'Loading…' : (<>{visibleProductCount} {visibleProductCount === 1 ? 'item' : 'items'}</>)}
           </span>
         </div>
 
@@ -332,7 +332,19 @@ export default function HomePage() {
         </div>
 
         {loading ? (
-          <div className="empty-state">Loading products...</div>
+          <div className="loading-skeleton" role="status" aria-label="Listings are loading">
+            <p className="waking-note">Waking up the backend — the free plan takes ~30–50s on first load. Listings appear automatically, no refresh needed.</p>
+            <div className="skeleton-grid" aria-hidden="true">
+              {[0, 1, 2, 3].map((index) => (
+                <div className="skeleton-card" key={index}>
+                  <div className="skeleton-image" />
+                  <div className="skeleton-line skeleton-line-short" />
+                  <div className="skeleton-line" />
+                  <div className="skeleton-line" />
+                </div>
+              ))}
+            </div>
+          </div>
         ) : loadError ? (
           <div className="empty-state">{loadError}</div>
         ) : categoryRails.length > 0 ? (

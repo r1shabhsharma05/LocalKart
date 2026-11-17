@@ -25,7 +25,25 @@
 | 🗄️ **Database** | MongoDB Atlas — FREE M0 cluster `localkart` (AWS ap-south-1, Mumbai) |
 | 💻 **Repository** | [r1shabhsharma05/LocalKart](https://github.com/r1shabhsharma05/LocalKart) |
 
-> **Note:** The backend runs on Render's Free plan — the first request after ~15 minutes of inactivity can take ~50 seconds while the service wakes up. The frontend loads instantly on Vercel.
+> **Note:** The backend runs on Render's Free plan — the first request after ~15 minutes of inactivity can take ~50 seconds while the service wakes up. The frontend shows a "Waking up the backend" state with skeleton cards instead of "0 items" while it waits. Check the backend directly: [`GET /api/health`](https://localkart-backend-cyz6.onrender.com/api/health) → `{"status":"ok"}`.
+
+---
+
+## ✅ Tests & CI
+
+[![CI](https://github.com/r1shabhsharma05/LocalKart/actions/workflows/ci.yml/badge.svg)](https://github.com/r1shabhsharma05/LocalKart/actions/workflows/ci.yml)
+
+Every push runs GitHub Actions (`.github/workflows/ci.yml`): backend tests, frontend tests + build, and a Playwright smoke test against the live site. A failing test fails the build.
+
+```bash
+npm --prefix backend test    # 20 tests: auth (signup, OTP verify, login, wrong-OTP lockout, CSRF), products (create, list, filter, pagination, search, sell flow), messages, error handling
+npm --prefix frontend test   # 16 tests: homepage rails/filtering, image crop, loading state
+npx --prefix frontend playwright test   # public flow on the live site: listings load → search → open a listing; plus a 390px no-overflow check
+```
+
+Measured 2026-11-17: **20 backend + 16 frontend tests passing, E2E 2/2 green locally.** CI is configured (`.github/workflows/ci.yml`); its first run happens on the next push — do not claim "CI green" until that run passes. API docs: [`API.md`](API.md). No Redis, no TypeScript, no payments — none of those are in this repo, and none are claimed.
+
+Lighthouse on the homepage (local production build, 1 seeded listing, 2026-11-17): **Performance 83, Accessibility 100, Best Practices 96, SEO 92** (before fixes: 82 / 94 / 92 / 83 — the fixes were a meta description, footer heading order, hero contrast, and unblocking Google Fonts in the CSP). A live-site Lighthouse run is still owed — it needs a machine with direct browser internet access.
 
 ---
 
@@ -57,7 +75,7 @@ LocalKart is a **full-stack campus marketplace** where students buy and sell pre
 - **Production cookies** — marked `Secure` over HTTPS; configure `FRONTEND_URL` for separate frontend origins
 
 ### 💬 Buying & Selling
-- **List an item** — up to 5 photos per listing (stored locally in `/uploads`, or Cloudinary for hosted images)
+- **List an item** — up to 5 photos per listing (Cloudinary is the production path when `CLOUDINARY_*` is set — every live photo is a `res.cloudinary.com` URL; local `/uploads` is the fallback when Cloudinary is not configured)
 - **Manage listings** — toggle live/sold state from the dashboard
 - **Buyer–seller chat** — buyers sign in to message the student seller; conversations update live while the chat is open
 - **Sale flow** — buyer sends an "I bought this item" request → seller confirms from their dashboard → LocalKart marks it sold and notifies the buyer in chat
@@ -78,10 +96,10 @@ LocalKart is a **full-stack campus marketplace** where students buy and sell pre
 | **Database** | MongoDB (Mongoose 8) — Atlas M0, AWS ap-south-1 |
 | **Auth** | JWT + signed HttpOnly cookie sessions + CSRF |
 | **Uploads** | multer (local `/uploads`) + Cloudinary (optional) |
-| **Email** | nodemailer SMTP (Gmail app password) |
+| **Email** | Brevo HTTP API (OTP codes; Render blocks outbound SMTP) |
 | **AI (optional)** | Google Gemini |
 | **Deploy — Frontend** | Vercel (Hobby) |
-| **Deploy — Backend** | Render (Free, Node, Singapore) |
+| **Deploy — Backend** | Render (Free, Node, single instance) |
 
 ---
 
@@ -131,8 +149,7 @@ Set these in `backend/.env`:
 |---|---|
 | `MONGO_URI` | MongoDB Atlas SRV string (or local MongoDB URI) |
 | `JWT_SECRET` | Cryptographically random secret, at least 32 bytes |
-| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` / `SMTP_USER` / `SMTP_PASSWORD` | SMTP for verification codes (Gmail → use an **app password**, not your account password) |
-| `EMAIL_FROM` | Sender address for verification emails |
+| `BREVO_API_KEY` / `BREVO_FROM` | Brevo HTTP API for verification codes (sender must be verified in Brevo) |
 | `FRONTEND_URL` | Exact frontend origin (comma-separated origins supported) |
 | `CAMPUS_NAME` | Enforce one university for all visitors (optional — when omitted, students are scoped by the college name given at registration; public browsing is not locked to one campus) |
 | `DEMO_SEED_PASSWORD` | Password for the 10 demo sellers |
@@ -165,19 +182,19 @@ Seeds **120 sample listings** (10 per category) and **10 demo sellers**. Demo lo
 | Setting | Value |
 |---|---|
 | Service | Web Service, Node, Free plan |
-| Region | Singapore |
-| Repo / Branch | `r1shabhsharma05/LocalKart` — `feat/atlas-connect-run` |
+| Region | Render dashboard (not recorded in this repo — the "Singapore" value previously here was unverified) |
+| Repo / Branch | `r1shabhsharma05/LocalKart` — `main` |
 | Root Directory | `backend` |
 | Build Command | `npm install` |
 | Start Command | `node server.js` |
-| Env vars | All of `backend/.env` (MONGO_URI, JWT_SECRET, SMTP_*, CLOUDINARY_*, GEMINI_*, DEMO_SEED_PASSWORD) with `NODE_ENV=production` and `FRONTEND_URL=https://localkart-jet.vercel.app` |
+| Env vars | All of `backend/.env` (MONGO_URI, JWT_SECRET, BREVO_*, CLOUDINARY_*, GEMINI_*, DEMO_SEED_PASSWORD) with `NODE_ENV=production` and `FRONTEND_URL=https://localkart-jet.vercel.app` |
 
 ### Frontend — Vercel
 
 | Setting | Value |
 |---|---|
 | Project | `localkart` (Hobby) |
-| Repo / Branch | `r1shabhsharma05/LocalKart` — `feat/atlas-connect-run` (promoted to Production) |
+| Repo / Branch | `r1shabhsharma05/LocalKart` — `main` (promoted to Production) |
 | Root Directory | `frontend` |
 | Framework | Vite — Build `npm run build`, Output `dist` |
 | Env var | `VITE_API_URL=https://localkart-backend-cyz6.onrender.com/api` |
@@ -191,7 +208,7 @@ For a production build locally: build the frontend with `npm run build` and star
 ## 🛡️ Security Notes
 
 - Never commit `backend/.env` — it is gitignored. Use `backend/.env.example` as the template.
-- Rotate `JWT_SECRET` and SMTP credentials if they are ever exposed.
+- Rotate `JWT_SECRET` and Brevo credentials if they are ever exposed.
 - The default rate-limit store is process-local — use a shared store when deploying multiple backend instances.
 - Configure Express to trust only your actual reverse proxy if deploying behind one.
 - Keep the frontend and API on the same site in production, serve over HTTPS, and set `FRONTEND_URL` for separate frontend origins.
@@ -202,6 +219,19 @@ For a production build locally: build the frontend with `npm run build` and star
 
 - **Shivam Rajput** ([@shivamcodes89](https://github.com/shivamcodes89)) — main contributor (cookie sessions, CSRF, demo listings, theme/nav refresh, security hardening)
 - **Rishabh Sharma** ([@r1shabhsharma05](https://github.com/r1shabhsharma05)) — Atlas + deployment
+
+## 🧑‍💻 What I built (Rishabh Sharma)
+
+From `git log` (39 of 57 commits are Rishabh's; Shivam 16, Aman 2). This is the part Rishabh can defend in an interview — the rest is Shivam's or Aman's work, not his:
+
+- **MongoDB Atlas + deployment** — Atlas M0 connection (`feat/atlas-connect-run`, PRs #2/#3), Render + Vercel production setup, SPA fallback rewrites so direct routes load on Vercel.
+- **Email delivery** — moved OTP mail from Gmail SMTP (Render blocks outbound SMTP) to Resend, then to the Brevo HTTP API when Resend's testing mode 403'd every non-owner recipient.
+- **Cross-origin auth fixes** — `SameSite=None` production cookies so CSRF + session work Vercel → Render; raised the email-code IP rate limit 5 → 20/hour (campus NAT shares one IP; the per-email 5/hour cap is the real anti-spam control).
+- **Login/signup UI** — neon-lamp auth pages + V4 cube OTP screen, show/hide password toggles, OTP text wrapping fixes.
+- **Listing photos** — adjust/crop product photos to the card frame before listing.
+- **Flagship pass (2026-11-17)** — backend API tests (19), product pagination + search, shared error handler, CI, waking-up loading state, `API.md`, this section.
+
+Live real listings (measured 2026-11-17 via `/api/products`): **8 real listings across 4 categories** (Books, Laptops, Clothes, Electronics), all `isDemo: false`, all with Cloudinary photos. More real listings need GLA sellers to list them — that is a people step, not a code step.
 
 ---
 

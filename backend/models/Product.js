@@ -78,4 +78,8 @@ const productSchema = new mongoose.Schema(
   }
 );
 
+// The list filter is always status + category, newest first — without this
+// the query collection-scans once listings grow past a few hundred.
+productSchema.index({ status: 1, category: 1, createdAt: -1 });
+
 module.exports = mongoose.model('Product', productSchema);

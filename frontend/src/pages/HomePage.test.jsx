@@ -92,6 +92,33 @@ describe('homepage product browser', () => {
     vi.clearAllMocks();
   });
 
+  it('shows a waking-up state with skeleton cards while loading, never 0 items', async () => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+    root = createRoot(container);
+    let resolveProducts;
+    vi.mocked(api.get).mockReturnValue(new Promise((resolve) => { resolveProducts = resolve; }));
+
+    window.IS_REACT_ACT_ENVIRONMENT = true;
+    HTMLElement.prototype.scrollIntoView = vi.fn();
+    await act(async () => {
+      root.render(
+        <MemoryRouter initialEntries={['/']}>
+          <HomePage />
+        </MemoryRouter>
+      );
+      await Promise.resolve();
+    });
+
+    expect(container.querySelector('.loading-skeleton')).toBeTruthy();
+    expect(container.textContent).toContain('Waking up');
+    expect(container.querySelector('.listing-count').textContent).not.toContain('0 items');
+
+    await act(async () => { resolveProducts({ data: products }); await Promise.resolve(); });
+    expect(container.querySelector('.loading-skeleton')).toBeNull();
+    expect(container.querySelectorAll('.product-card-rail')).toHaveLength(3);
+  });
+
   it('renders separate category rails and scrolls to the selected category', async () => {
     await renderHomePage();
 

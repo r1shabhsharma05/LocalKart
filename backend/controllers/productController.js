@@ -1,6 +1,7 @@
 const fs = require('fs/promises');
 const Product = require('../models/Product');
 const Message = require('../models/Message');
+const { parsePagination } = require('../utils/pagination');
 const { cloudinary, hasCloudinaryConfig } = require('../config/cloudinary');
 
 const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -138,7 +139,7 @@ const createProduct = async (req, res) => {
 
 const getProducts = async (req, res) => {
   try {
-    const { category, minPrice, maxPrice, search, status } = req.query;
+    const { category, minPrice, maxPrice, status } = req.query;
     const filter = { status: status === 'sold' ? 'sold' : 'active' };
     const requestedCampus = typeof req.query.college === 'string' ? req.query.college.trim() : '';
     const campusName = process.env.CAMPUS_NAME?.trim() || requestedCampus;
@@ -155,19 +156,45 @@ const getProducts = async (req, res) => {
       if (maxPrice && Number.isFinite(Number(maxPrice))) filter.price.$lte = Number(maxPrice);
     }
 
-    if (typeof search === 'string' && search.trim()) {
-      const term = new RegExp(escapeRegex(search.trim()), 'i');
+    // `q` is the documented search param; `search` stays as a legacy alias.
+    const searchTerm = typeof req.query.q === 'string' && req.query.q.trim()
+      ? req.query.q
+      : req.query.search;
+    if (typeof searchTerm === 'string' && searchTerm.trim()) {
+      const term = new RegExp(escapeRegex(searchTerm.trim()), 'i');
       filter.$or = [{ title: term }, { description: term }, { category: term }];
     }
 
     const replacedDemoIds = await getReplacedDemoIds(campusName);
     if (replacedDemoIds.length) filter._id = { $nin: replacedDemoIds };
 
-    const products = await Product.find(filter)
-      .populate('seller', 'name college')
-      .sort({ createdAt: -1 });
+    // Paginated shape only when the caller asks for it (page/limit/q);
+    // otherwise the historic bare-array response is returned unchanged,
+    // so the existing frontend keeps working.
+    const wantsPage = req.query.page !== undefined || req.query.limit !== undefined || req.query.q !== undefined;
+    if (!wantsPage) {
+      const products = await Product.find(filter)
+        .populate('seller', 'name college')
+        .sort({ createdAt: -1 });
+      return res.status(200).json(products);
+    }
 
-    res.status(200).json(products);
+    const { page, limit, skip } = parsePagination(req.query);
+    const [total, products] = await Promise.all([
+      Product.countDocuments(filter),
+      Product.find(filter)
+        .populate('seller', 'name college')
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit),
+    ]);
+    res.status(200).json({
+      products,
+      total,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(total / limit)),
+    });
   } catch (error) {
     console.error('Product fetch failed:', error);
     res.status(500).json({ message: 'Error fetching products' });

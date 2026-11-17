@@ -37,6 +37,8 @@ export default function MarketplaceImage({ src, alt, category, title = '', class
       data-fallback-src={src && imageFallback ? imageFallback : ''}
       alt={alt}
       className={className}
+      loading="lazy"
+      decoding="async"
       onError={(event) => {
         const fallbackImage = event.currentTarget.dataset.fallbackSrc;
         if (fallbackImage && event.currentTarget.src !== fallbackImage) {

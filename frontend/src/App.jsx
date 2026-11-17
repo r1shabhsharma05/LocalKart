@@ -77,7 +77,7 @@ function App() {
               </div>
 
               <div className="footer-column">
-                <h4>Explore</h4>
+                <h3>Explore</h3>
                 <Link to="/">Home</Link>
                 <Link to="/buy">Buy</Link>
                 <Link to="/sell">Sell</Link>
@@ -85,7 +85,7 @@ function App() {
               </div>
 
               <div className="footer-column">
-                <h4>Account</h4>
+                <h3>Account</h3>
                 <Link to="/login">Login</Link>
                 <Link to="/messages">Messages</Link>
                 <Link to="/forgot-password">Reset password</Link>
@@ -93,7 +93,7 @@ function App() {
               </div>
 
               <div className="footer-column">
-                <h4>Support</h4>
+                <h3>Support</h3>
                 <Link to="/">Help center</Link>
                 <Link to="/">Safety</Link>
                 <Link to="/">Community rules</Link>

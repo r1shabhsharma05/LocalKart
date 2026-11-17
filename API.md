@@ -1,1 +1,163 @@
-IyBMb2NhbEthcnQgQVBJCgpCYXNlIFVSTCAocHJvZHVjdGlvbik6IGBodHRwczovL2xvY2Fsa2FydC1iYWNrZW5kLWN5ejYub25yZW5kZXIuY29tL2FwaWAKSGVhbHRoOiBgR0VUIC9hcGkvaGVhbHRoYCDihpIgYDIwMCB7InN0YXR1cyI6Im9rIiwibWVzc2FnZSI6IkxvY2FsS2FydCBiYWNrZW5kIGlzIHJ1bm5pbmcifWAKCiMjIEF1dGggKyBDU1JGCgotIFNlc3Npb25zIGFyZSBzaWduZWQgSHR0cE9ubHkgY29va2llcy4gTG9nIGluIG9uY2U7IHRoZSBjb29raWUgYXV0aGVudGljYXRlcyBsYXRlciBjYWxscy4KLSBFdmVyeSBtdXRhdGluZyByZXF1ZXN0IChgUE9TVGAvYFBVVGAvYERFTEVURWApIG5lZWRzIGEgQ1NSRiB0b2tlbjogZmlyc3QgYEdFVCAvYXBpL2F1dGgvY3NyZi10b2tlbmAg4oaSIGB7InRva2VuIjoiPDY0LWhleD4ifWAsIHRoZW4gc2VuZCB0aGUgc2FtZSB2YWx1ZSBhcyB0aGUgYFgtQ1NSRi1Ub2tlbmAgaGVhZGVyICh0aGUgZW5kcG9pbnQgYWxzbyBzZXRzIGl0IGFzIGEgY29va2llKS4gYEdFVGAgcmVxdWVzdHMgbmVlZCBubyB0b2tlbi4KLSBSYXRlIGxpbWl0cyBhcmUgcHJvY2Vzcy1sb2NhbCAoYGV4cHJlc3MtcmF0ZS1saW1pdGApOiBhdXRoIG11dGF0aW9ucyAzMC8xNW1pbiBwZXIgSVAsIGxvZ2luIDEwLzE1bWluLCBlbWFpbC1jb2RlIHJlcXVlc3RzIDIwL2hvdXIgcGVyIElQIHBsdXMgNS9ob3VyIHBlciBlbWFpbCBpbiB0aGUgY29udHJvbGxlci4gUmVuZGVyIEZyZWUgcnVucyBhIHNpbmdsZSBpbnN0YW5jZSwgc28gYSBzaGFyZWQgc3RvcmUgaXMgbm90IG5lZWRlZCB0b2RheSDigJQgaWYgdGhlIGJhY2tlbmQgZXZlciBzY2FsZXMgcGFzdCBvbmUgaW5zdGFuY2UsIG1vdmUgdGhlIHN0b3JlIHRvIFJlZGlzIGZpcnN0IChzZWUgUkVBRE1FKS4KCiMjIEVycm9ycwoKQWxsIGVycm9ycyBhcmUgSlNPTiBgeyAibWVzc2FnZSI6ICIuLi4iIH1gLiBDbGllbnQgZXJyb3JzIGFyZSA0MDAvNDAzLzQwNC80MDkvNDI5OyBzZXJ2ZXIgZXJyb3JzIGFyZSA1MDAgd2l0aCB0aGUgZ2VuZXJpYyBtZXNzYWdlIGBTb21ldGhpbmcgd2VudCB3cm9uZ2Ag4oCUIG5vIHN0YWNrIHRyYWNlIGlzIGV2ZXIgcmV0dXJuZWQuCgojIyBBdXRoCgojIyMgYFBPU1QgL2FwaS9hdXRoL3JlZ2lzdGVyYCDigJQgbm8gYXV0aCwgQ1NSRiByZXF1aXJlZApgYGBqc29uCi8vIHJlcXVlc3QKeyAibmFtZSI6ICJSaXNoYWJoIFNoYXJtYSIsICJlbWFpbCI6ICJ5b3VAZ2xhLmFjLmluIiwgInBhc3N3b3JkIjogIlBhc3N3b3JkQDEyMyIsICJjb2xsZWdlIjogIkdMQSBVbml2ZXJzaXR5IiB9Ci8vIDIwMCDigJQgYSA2LWRpZ2l0IGNvZGUgaXMgZW1haWxlZCAoMTAgbWluLCA1IGF0dGVtcHRzLCA1IHNlbmRzL2hvdXIgcGVyIGVtYWlsKQp7ICJtZXNzYWdlIjogIlZlcmlmaWNhdGlvbiBjb2RlIHNlbnQuIFBsZWFzZSBjaGVjayB5b3VyIGVtYWlsLiIgfQovLyA0MDAg4oCUIHdlYWsgcGFzc3dvcmQgLyBiYWQgZW1haWwgLyBtaXNzaW5nIGZpZWxkOyA1MDMg4oCUIGVtYWlsIG5vdCBjb25maWd1cmVkCmBgYAoKIyMjIGBQT1NUIC9hcGkvYXV0aC92ZXJpZnktZW1haWxgIOKAlCBubyBhdXRoLCBDU1JGIHJlcXVpcmVkCmBgYGpzb24KLy8gcmVxdWVzdAp7ICJlbWFpbCI6ICJ5b3VAZ2xhLmFjLmluIiwgImNvZGUiOiAiMTIzNDU2IiB9Ci8vIDIwMSDigJQgYWNjb3VudCBjcmVhdGVkLCBzZXNzaW9uIGNvb2tpZSBzZXQKeyAibWVzc2FnZSI6ICJFbWFpbCB2ZXJpZmllZCBhbmQgYWNjb3VudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseSIsICJ1c2VyIjogeyAiaWQiOiAiLi4uIiwgIm5hbWUiOiAiUmlzaGFiaCBTaGFybWEiLCAiZW1haWwiOiAieW91QGdsYS5hYy5pbiIsICJjb2xsZWdlIjogIkdMQSBVbml2ZXJzaXR5IiB9IH0KLy8gNDAwIOKAlCB3cm9uZy9leHBpcmVkIGNvZGU7IDQyOSDigJQgNSB3cm9uZyBjb2RlcwpgYGAKCiMjIyBgUE9TVCAvYXBpL2F1dGgvbG9naW5gIOKAlCBubyBhdXRoLCBDU1JGIHJlcXVpcmVkCmBgYGpzb24KLy8gcmVxdWVzdAp7ICJlbWFpbCI6ICJ5b3VAZ2xhLmFjLmluIiwgInBhc3N3b3JkIjogIlBhc3N3b3JkQDEyMyIgfQovLyAyMDAg4oCUIHNlc3Npb24gY29va2llIHNldAp7ICJtZXNzYWdlIjogIkxvZ2luIHN1Y2Nlc3NmdWwiLCAidXNlciI6IHsgImlkIjogIi4uLiIsICJuYW1lIjogIlJpc2hhYmggU2hhcm1hIiwgImVtYWlsIjogInlvdUBnbGEuYWMuaW4iIH0gfQpgYGAKCiMjIyBgR0VUIC9hcGkvYXV0aC9tZWAg4oCUIGF1dGggcmVxdWlyZWQKYGBganNvbgovLyAyMDAKeyAiaWQiOiAiLi4uIiwgIm5hbWUiOiAiUmlzaGFiaCBTaGFybWEiLCAiZW1haWwiOiAieW91QGdsYS5hYy5pbiIsICJjb2xsZWdlIjogIkdMQSBVbml2ZXJzaXR5IiB9CmBgYAoKIyMjIGBQT1NUIC9hcGkvYXV0aC9sb2dvdXRgIOKAlCBhdXRoLCBDU1JGIHJlcXVpcmVkIOKGkiBgMjAwIHsibWVzc2FnZSI6IkxvZ2dlZCBvdXQgc3VjY2Vzc2Z1bGx5In1gCgojIyMgYFBPU1QgL2FwaS9hdXRoL2ZvcmdvdC1wYXNzd29yZGAg4oCUIG5vIGF1dGgsIENTUkYgcmVxdWlyZWQKYGBganNvbgovLyByZXF1ZXN0CnsgImVtYWlsIjogInlvdUBnbGEuYWMuaW4iIH0KLy8gMjAwIOKAlCBjb2RlIGVtYWlsZWQgb25seSBpZiB0aGUgYWNjb3VudCBleGlzdHMgKHNhbWUgbWVzc2FnZSBlaXRoZXIgd2F5KQp7ICJtZXNzYWdlIjogIklmIGFuIGFjY291bnQgZXhpc3RzIGZvciB0aGlzIGVtYWlsLCBhIHZlcmlmaWNhdGlvbiBjb2RlIGhhcyBiZWVuIHNlbnQuIiB9CmBgYAoKIyMjIGBQT1NUIC9hcGkvYXV0aC9mb3Jnb3QtcGFzc3dvcmQvdmVyaWZ5LW90cGAg4oCUIG5vIGF1dGgsIENTUkYgcmVxdWlyZWQKYGBganNvbgovLyByZXF1ZXN0CnsgImVtYWlsIjogInlvdUBnbGEuYWMuaW4iLCAiY29kZSI6ICIxMjM0NTYiIH0KLy8gMjAwCnsgIm1lc3NhZ2UiOiAiRW1haWwgdmVyaWZpZWQuIFNldCB5b3VyIG5ldyBwYXNzd29yZC4iLCAicmVzZXRUb2tlbiI6ICI8NjQtaGV4PiIgfQpgYGAKCiMjIyBgUE9TVCAvYXBpL2F1dGgvcmVzZXQtcGFzc3dvcmRgIOKAlCBubyBhdXRoLCBDU1JGIHJlcXVpcmVkCmBgYGpzb24KLy8gcmVxdWVzdAp7ICJlbWFpbCI6ICJ5b3VAZ2xhLmFjLmluIiwgInJlc2V0VG9rZW4iOiAiPDY0LWhleD4iLCAicGFzc3dvcmQiOiAiTmV3UGFzc0AxMjMiLCAiY29uZmlybVBhc3N3b3JkIjogIk5ld1Bhc3NAMTIzIiB9Ci8vIDIwMAp7ICJtZXNzYWdlIjogIlBhc3N3b3JkIHJlc2V0IHN1Y2Nlc3NmdWwuIFBsZWFzZSBsb2cgaW4gd2l0aCB5b3VyIG5ldyBwYXNzd29yZC4iIH0KYGBgCgojIyBQcm9kdWN0cwoKIyMjIGBHRVQgL2FwaS9wcm9kdWN0c2Ag4oCUIHB1YmxpYwpRdWVyeSBwYXJhbXM6IGBjYXRlZ29yeWAsIGBtaW5QcmljZWAsIGBtYXhQcmljZWAsIGBzZWFyY2hgIChsZWdhY3kpIG9yIGBxYCwgYGNvbGxlZ2VgLCBgc3RhdHVzPWFjdGl2ZXxzb2xkYCwgYHBhZ2VgLCBgbGltaXRgICgx4oCTMTAwLCBkZWZhdWx0IDIwKS4KCldpdGhvdXQgYHBhZ2VgL2BsaW1pdGAvYHFgIHRoZSByZXNwb25zZSBpcyBhIGJhcmUgYXJyYXkgKGhpc3RvcmljIHNoYXBlKToKYGBganNvbgpbeyAiX2lkIjogIi4uLiIsICJ0aXRsZSI6ICJKYXZhIE5vdGVzIiwgImNhdGVnb3J5IjogIkJvb2tzIiwgInByaWNlIjogMTAwLCAiY29uZGl0aW9uIjogIkdvb2QiLCAic3RhdHVzIjogImFjdGl2ZSIsICJpc0RlbW8iOiBmYWxzZSwgImltYWdlcyI6IFsiaHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vLi4uIl0sICJzZWxsZXIiOiB7ICJfaWQiOiAiLi4uIiwgIm5hbWUiOiAiUmlzaGFiaCBTaGFybWEiLCAiY29sbGVnZSI6ICJHbGEgdW5pdmVyc2l0eSIgfSwgImNvbGxlZ2UiOiAiR0xBIiwgImxvY2F0aW9uIjogIkxpYnJhcnkiIH1dCmBgYAoKV2l0aCBgcGFnZWAvYGxpbWl0YC9gcWAgdGhlIHJlc3BvbnNlIGlzIHBhZ2luYXRlZDoKYGBganNvbgovLyBHRVQgL2FwaS9wcm9kdWN0cz9wYWdlPTImbGltaXQ9MiZxPWJvb2sKeyAicHJvZHVjdHMiOiBbIHsgIl9pZCI6ICIuLi4iLCAidGl0bGUiOiAiSmF2YSBOb3RlcyIsICIuLi4iOiAiLi4uIiB9IF0sICJ0b3RhbCI6IDgsICJwYWdlIjogMiwgImxpbWl0IjogMiwgInRvdGFsUGFnZXMiOiA0IH0KYGBgCgojIyMgYEdFVCAvYXBpL3Byb2R1Y3RzLzppZGAg4oCUIHB1YmxpYyDihpIgYDIwMGAgdGhlIHByb2R1Y3Qgb2JqZWN0LCBvciBgNDA0IHsibWVzc2FnZSI6IlByb2R1Y3Qgbm90IGZvdW5kIn1gIC8gYDQwMCB7Im1lc3NhZ2UiOiJJbnZhbGlkIHByb2R1Y3QgaWQifWAKCiMjIyBgUE9TVCAvYXBpL3Byb2R1Y3RzYCDigJQgYXV0aCwgQ1NSRiByZXF1aXJlZCwgYG11bHRpcGFydC9mb3JtLWRhdGFgLCB1cCB0byA1IGBpbWFnZXNgCmBgYAp0aXRsZT1KYXZhIE5vdGVzJmRlc2NyaXB0aW9uPUJlc3Qgbm90ZXMmY2F0ZWdvcnk9Qm9va3MmcHJpY2U9MTAwJmNvbmRpdGlvbj1Hb29kJmxvY2F0aW9uPUxpYnJhcnkKLy8gMjAxCnsgIm1lc3NhZ2UiOiAiUHJvZHVjdCBjcmVhdGVkIHN1Y2Nlc3NmdWxseSIsICJwcm9kdWN0IjogeyAiX2lkIjogIi4uLiIsICJ0aXRsZSI6ICJKYXZhIE5vdGVzIiwgIi4uLiI6ICIuLi4iIH0gfQpgYGAKSW1hZ2VzOiBwcm9kdWN0aW9uIHBhdGggaXMgQ2xvdWRpbmFyeSAoYGxvY2Fsa2FydC9wcm9kdWN0c2AgZm9sZGVyKSB3aGVuIGBDTE9VRElOQVJZXypgIGlzIGNvbmZpZ3VyZWQg4oCUIGV2ZXJ5IGxpdmUgbGlzdGluZyBwaG90byBpcyBhIGByZXMuY2xvdWRpbmFyeS5jb21gIFVSTC4gTG9jYWwgYC91cGxvYWRzYCBpcyB0aGUgZmFsbGJhY2sgd2hlbiBDbG91ZGluYXJ5IGlzIG5vdCBjb25maWd1cmVkIChkZXYpIGFuZCBpcyBzZXJ2ZWQgZnJvbSB0aGUgYmFja2VuZC4gU2l4IGVhcmx5IHVwbG9hZCBwaG90b3MgYXJlIGNvbW1pdHRlZCB1bmRlciBgYmFja2VuZC91cGxvYWRzL2A7IHRoZXkgYXJlIG5vdCByZWZlcmVuY2VkIGJ5IGxpdmUgbGlzdGluZ3MuCgojIyMgYFBVVCAvYXBpL3Byb2R1Y3RzLzppZGAg4oCUIGF1dGggKHNlbGxlciBvbmx5KSwgQ1NSRiByZXF1aXJlZApgYGBqc29uCi8vIHJlcXVlc3Qg4oCUIGFueSBvZiB0aXRsZSwgZGVzY3JpcHRpb24sIGNhdGVnb3J5LCBwcmljZSwgY29uZGl0aW9uLCBsb2NhdGlvbiwgc3RhdHVzCnsgInByaWNlIjogOTAgfQovLyAyMDAKeyAibWVzc2FnZSI6ICJQcm9kdWN0IHVwZGF0ZWQgc3VjY2Vzc2Z1bGx5IiwgInByb2R1Y3QiOiB7ICIuLi4iOiAiLi4uIiB9IH0KYGBgCgojIyMgYERFTEVURSAvYXBpL3Byb2R1Y3RzLzppZGAg4oCUIGF1dGggKHNlbGxlciBvbmx5KSwgQ1NSRiByZXF1aXJlZCDihpIgYDIwMCB7Im1lc3NhZ2UiOiJQcm9kdWN0IGRlbGV0ZWQgc3VjY2Vzc2Z1bGx5In1gCgojIyMgYEdFVCAvYXBpL3Byb2R1Y3RzL21pbmVgIOKAlCBhdXRoIOKGkiBgMjAwYCBhcnJheSBvZiB0aGUgY2FsbGVyJ3MgbGlzdGluZ3MKCiMjIyBgUE9TVCAvYXBpL3Byb2R1Y3RzLzppZC9wdXJjaGFzZWAg4oCUIGF1dGggKGJ1eWVyKSwgQ1NSRiByZXF1aXJlZApUaGUgYnV5ZXIgbXVzdCBoYXZlIG1lc3NhZ2VkIHRoZSBzZWxsZXIgYWJvdXQgdGhpcyBpdGVtIGZpcnN0LiBBdG9taWM6IG9ubHkgb25lIHBlbmRpbmcgcmVxdWVzdCB3aW5zOyBhIHNlY29uZCBidXllciBnZXRzIGA0MDlgLgpgYGBqc29uCi8vIDIwMAp7ICJtZXNzYWdlIjogIlB1cmNoYXNlIHJlcXVlc3Qgc2VudC4gVGhlIGxpc3Rpbmcgd2lsbCByZW1haW4gYXZhaWxhYmxlIHVudGlsIHRoZSBzZWxsZXIgY29uZmlybXMgdGhlIHNhbGUuIiwgInByb2R1Y3QiOiB7ICIuLi4iOiAiLi4uIiB9IH0KLy8gNDA5CnsgIm1lc3NhZ2UiOiAiQSBwdXJjaGFzZSByZXF1ZXN0IGlzIGFscmVhZHkgcGVuZGluZyBvciB0aGlzIGl0ZW0gaXMgbm8gbG9uZ2VyIGF2YWlsYWJsZSIgfQpgYGAKCiMjIyBgUE9TVCAvYXBpL3Byb2R1Y3RzLzppZC9jb25maXJtLXNhbGVgIOKAlCBhdXRoIChzZWxsZXIgb25seSksIENTUkYgcmVxdWlyZWQKYGBganNvbgovLyAyMDAKeyAibWVzc2FnZSI6ICJTYWxlIGNvbmZpcm1lZC4gVGhlIGxpc3RpbmcgaXMgbm93IHNvbGQuIiwgInByb2R1Y3QiOiB7ICJzdGF0dXMiOiAic29sZCIsICIuLi4iOiAiLi4uIiB9IH0KLy8gNDA5IOKAlCBubyBwZW5kaW5nIHJlcXVlc3QKeyAibWVzc2FnZSI6ICJUaGVyZSBpcyBubyBwZW5kaW5nIHB1cmNoYXNlIHJlcXVlc3QgZm9yIHRoaXMgbGlzdGluZyIgfQpgYGAKCiMjIE1lc3NhZ2VzCgojIyMgYFBPU1QgL2FwaS9tZXNzYWdlc2Ag4oCUIGF1dGgsIENTUkYgcmVxdWlyZWQKYGBganNvbgovLyByZXF1ZXN0CnsgInJlY2VpdmVyIjogIjx1c2VyIGlkPiIsICJwcm9kdWN0IjogIjxwcm9kdWN0IGlkPiIsICJjb250ZW50IjogIkhpLCBpcyB0aGlzIHN0aWxsIGF2YWlsYWJsZT8iIH0KLy8gMjAxCnsgIm1lc3NhZ2UiOiAiTWVzc2FnZSBzZW50IHN1Y2Nlc3NmdWxseSIsICJkYXRhIjogeyAiX2lkIjogIi4uLiIsICJzZW5kZXIiOiAiLi4uIiwgInJlY2VpdmVyIjogIi4uLiIsICJwcm9kdWN0IjogIi4uLiIsICJjb250ZW50IjogIkhpLCBpcyB0aGlzIHN0aWxsIGF2YWlsYWJsZT8iIH0gfQpgYGAKCiMjIyBgR0VUIC9hcGkvbWVzc2FnZXM/cHJvZHVjdD08aWQ+YCDigJQgYXV0aCDihpIgYDIwMGAgYXJyYXkgb2YgdGhlIGNhbGxlcidzIG1lc3NhZ2VzIChvcHRpb25hbGx5IGZpbHRlcmVkIHRvIG9uZSBwcm9kdWN0KQoKIyMgUmV2aWV3cwoKIyMjIGBQT1NUIC9hcGkvcmV2aWV3c2Ag4oCUIGF1dGgsIENTUkYgcmVxdWlyZWQKYGBganNvbgovLyByZXF1ZXN0CnsgInJldmlld2VkVXNlciI6ICI8dXNlciBpZD4iLCAicHJvZHVjdCI6ICI8cHJvZHVjdCBpZD4iLCAicmF0aW5nIjogNSwgImNvbW1lbnQiOiAiU21vb3RoIGhhbmRvdmVyLiIgfQovLyAyMDEKeyAibWVzc2FnZSI6ICJSZXZpZXcgYWRkZWQgc3VjY2Vzc2Z1bGx5IiwgInJldmlldyI6IHsgIi4uLiI6ICIuLi4iIH0sICJhdmVyYWdlUmF0aW5nIjogNSB9CmBgYAoKIyMjIGBHRVQgL2FwaS9yZXZpZXdzL3VzZXIvOnVzZXJJZGAg4oCUIHB1YmxpYyDihpIgYDIwMGAgYXJyYXkgb2YgcmV2aWV3cyBmb3IgdGhhdCB1c2VyCgojIyBBSSAob3B0aW9uYWwsIEdlbWluaSkKCiMjIyBgUE9TVCAvYXBpL2FpL3N1Z2dlc3QtcHJpY2VgIOKAlCBwdWJsaWMKYGBganNvbgovLyByZXF1ZXN0CnsgInRpdGxlIjogIkphdmEgTm90ZXMiLCAiY2F0ZWdvcnkiOiAiQm9va3MiLCAiY29uZGl0aW9uIjogIkdvb2QiLCAicHJpY2UiOiAxMDAgfQovLyAyMDAKeyAic3VnZ2VzdGVkUHJpY2UiOiAxMjAsICJtYXJrZXRSYW5nZSI6ICLigrk4MOKAk+KCuTE1MCIsICJyZWFzb24iOiAiLi4uIiB9CmBgYAo=
+# LocalKart API
+
+Base URL (production): `https://localkart-backend-cyz6.onrender.com/api`
+Health: `GET /api/health` → `200 {"status":"ok","message":"LocalKart backend is running"}`
+
+## Auth + CSRF
+
+- Sessions are signed HttpOnly cookies. Log in once; the cookie authenticates later calls.
+- Every mutating request (`POST`/`PUT`/`DELETE`) needs a CSRF token: first `GET /api/auth/csrf-token` → `{"token":"<64-hex>"}`, then send the same value as the `X-CSRF-Token` header (the endpoint also sets it as a cookie). `GET` requests need no token.
+- Rate limits are process-local (`express-rate-limit`): auth mutations 30/15min per IP, login 10/15min, email-code requests 20/hour per IP plus 5/hour per email in the controller. Render Free runs a single instance, so a shared store is not needed today — if the backend ever scales past one instance, move the store to Redis first (see README).
+
+## Errors
+
+All errors are JSON `{ "message": "..." }`. Client errors are 400/403/404/409/429; server errors are 500 with the generic message `Something went wrong` — no stack trace is ever returned.
+
+## Auth
+
+### `POST /api/auth/register` — no auth, CSRF required
+```json
+// request
+{ "name": "Rishabh Sharma", "email": "you@gla.ac.in", "password": "Password@123", "college": "GLA University" }
+// 200 — a 6-digit code is emailed (10 min, 5 attempts, 5 sends/hour per email)
+{ "message": "Verification code sent. Please check your email." }
+// 400 — weak password / bad email / missing field; 503 — email not configured
+```
+
+### `POST /api/auth/verify-email` — no auth, CSRF required
+```json
+// request
+{ "email": "you@gla.ac.in", "code": "123456" }
+// 201 — account created, session cookie set
+{ "message": "Email verified and account created successfully", "user": { "id": "...", "name": "Rishabh Sharma", "email": "you@gla.ac.in", "college": "GLA University" } }
+// 400 — wrong/expired code; 429 — 5 wrong codes
+```
+
+### `POST /api/auth/login` — no auth, CSRF required
+```json
+// request
+{ "email": "you@gla.ac.in", "password": "Password@123" }
+// 200 — session cookie set
+{ "message": "Login successful", "user": { "id": "...", "name": "Rishabh Sharma", "email": "you@gla.ac.in" } }
+```
+
+### `GET /api/auth/me` — auth required
+```json
+// 200
+{ "id": "...", "name": "Rishabh Sharma", "email": "you@gla.ac.in", "college": "GLA University" }
+```
+
+### `POST /api/auth/logout` — auth, CSRF required → `200 {"message":"Logged out successfully"}`
+
+### `POST /api/auth/forgot-password` — no auth, CSRF required
+```json
+// request
+{ "email": "you@gla.ac.in" }
+// 200 — code emailed only if the account exists (same message either way)
+{ "message": "If an account exists for this email, a verification code has been sent." }
+```
+
+### `POST /api/auth/forgot-password/verify-otp` — no auth, CSRF required
+```json
+// request
+{ "email": "you@gla.ac.in", "code": "123456" }
+// 200
+{ "message": "Email verified. Set your new password.", "resetToken": "<64-hex>" }
+```
+
+### `POST /api/auth/reset-password` — no auth, CSRF required
+```json
+// request
+{ "email": "you@gla.ac.in", "resetToken": "<64-hex>", "password": "NewPass@123", "confirmPassword": "NewPass@123" }
+// 200
+{ "message": "Password reset successful. Please log in with your new password." }
+```
+
+## Products
+
+### `GET /api/products` — public
+Query params: `category`, `minPrice`, `maxPrice`, `search` (legacy) or `q`, `college`, `status=active|sold`, `page`, `limit` (1–100, default 20).
+
+Without `page`/`limit`/`q` the response is a bare array (historic shape):
+```json
+[{ "_id": "...", "title": "Java Notes", "category": "Books", "price": 100, "condition": "Good", "status": "active", "isDemo": false, "images": ["https://res.cloudinary.com/..."], "seller": { "_id": "...", "name": "Rishabh Sharma", "college": "Gla university" }, "college": "GLA", "location": "Library" }]
+```
+
+With `page`/`limit`/`q` the response is paginated:
+```json
+// GET /api/products?page=2&limit=2&q=book
+{ "products": [ { "_id": "...", "title": "Java Notes", "...": "..." } ], "total": 8, "page": 2, "limit": 2, "totalPages": 4 }
+```
+
+### `GET /api/products/:id` — public → `200` the product object, or `404 {"message":"Product not found"}` / `400 {"message":"Invalid product id"}`
+
+### `POST /api/products` — auth, CSRF required, `multipart/form-data`, up to 5 `images`
+```
+title=Java Notes&description=Best notes&category=Books&price=100&condition=Good&location=Library
+// 201
+{ "message": "Product created successfully", "product": { "_id": "...", "title": "Java Notes", "...": "..." } }
+```
+Images: production path is Cloudinary (`localkart/products` folder) when `CLOUDINARY_*` is configured — every live listing photo is a `res.cloudinary.com` URL. Local `/uploads` is the fallback when Cloudinary is not configured (dev) and is served from the backend. Six early upload photos are committed under `backend/uploads/`; they are not referenced by live listings.
+
+### `PUT /api/products/:id` — auth (seller only), CSRF required
+```json
+// request — any of title, description, category, price, condition, location, status
+{ "price": 90 }
+// 200
+{ "message": "Product updated successfully", "product": { "...": "..." } }
+```
+
+### `DELETE /api/products/:id` — auth (seller only), CSRF required → `200 {"message":"Product deleted successfully"}`
+
+### `GET /api/products/mine` — auth → `200` array of the caller's listings
+
+### `POST /api/products/:id/purchase` — auth (buyer), CSRF required
+The buyer must have messaged the seller about this item first. Atomic: only one pending request wins; a second buyer gets `409`.
+```json
+// 200
+{ "message": "Purchase request sent. The listing will remain available until the seller confirms the sale.", "product": { "...": "..." } }
+// 409
+{ "message": "A purchase request is already pending or this item is no longer available" }
+```
+
+### `POST /api/products/:id/confirm-sale` — auth (seller only), CSRF required
+```json
+// 200
+{ "message": "Sale confirmed. The listing is now sold.", "product": { "status": "sold", "...": "..." } }
+// 409 — no pending request
+{ "message": "There is no pending purchase request for this listing" }
+```
+
+## Messages
+
+### `POST /api/messages` — auth, CSRF required
+```json
+// request
+{ "receiver": "<user id>", "product": "<product id>", "content": "Hi, is this still available?" }
+// 201
+{ "message": "Message sent successfully", "data": { "_id": "...", "sender": "...", "receiver": "...", "product": "...", "content": "Hi, is this still available?" } }
+```
+
+### `GET /api/messages?product=<id>` — auth → `200` array of the caller's messages (optionally filtered to one product)
+
+## Reviews
+
+### `POST /api/reviews` — auth, CSRF required
+```json
+// request
+{ "reviewedUser": "<user id>", "product": "<product id>", "rating": 5, "comment": "Smooth handover." }
+// 201
+{ "message": "Review added successfully", "review": { "...": "..." }, "averageRating": 5 }
+```
+
+### `GET /api/reviews/user/:userId` — public → `200` array of reviews for that user
+
+## AI (optional, Gemini)
+
+### `POST /api/ai/suggest-price` — public
+```json
+// request
+{ "title": "Java Notes", "category": "Books", "condition": "Good", "price": 100 }
+// 200
+{ "suggestedPrice": 120, "marketRange": "₹80–₹150", "reason": "..." }
+```

@@ -1,1 +1,30 @@
-ewogICJuYW1lIjogImxvY2Fsa2FydC1iYWNrZW5kIiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgIm1haW4iOiAic2VydmVyLmpzIiwKICAic2NyaXB0cyI6IHsKICAgICJzdGFydCI6ICJub2RlIHNlcnZlci5qcyIsCiAgICAiZGV2IjogIm5vZGUgc2VydmVyLmpzIiwKICAgICJ0ZXN0IjogInZpdGVzdCBydW4iLAogICAgInNlZWQ6ZGVtbyI6ICJub2RlIHNjcmlwdHMvc2VlZERlbW9EYXRhLmpzIgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJheGlvcyI6ICJeMS43LjciLAogICAgImJjcnlwdGpzIjogIl4yLjQuMyIsCiAgICAiY2xvdWRpbmFyeSI6ICJeMi41LjEiLAogICAgImNvcnMiOiAiXjIuOC41IiwKICAgICJkb3RlbnYiOiAiXjE2LjQuNSIsCiAgICAiZXhwcmVzcyI6ICJeNC4yMS4xIiwKICAgICJleHByZXNzLXJhdGUtbGltaXQiOiAiXjguNy4yIiwKICAgICJoZWxtZXQiOiAiXjguMy4wIiwKICAgICJqc29ud2VidG9rZW4iOiAiXjkuMC4yIiwKICAgICJtb25nb29zZSI6ICJeOC43LjIiLAogICAgIm11bHRlciI6ICJeMS40LjUtbHRzLjEiLAogICAgIm5vZGVtYWlsZXIiOiAiXjEwLjEuNyIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAibW9uZ29kYi1tZW1vcnktc2VydmVyIjogIl4xMS4zLjAiLAogICAgInN1cGVydGVzdCI6ICJeNy4zLjIiLAogICAgInZpdGVzdCI6ICJeNS4xLjAiCiAgfQp9Cg==
+{
+  "name": "localkart-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "vitest run",
+    "seed:demo": "node scripts/seedDemoData.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^8.7.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^10.1.7"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "supertest": "^7.3.2",
+    "vitest": "^5.1.0"
+  }
+}

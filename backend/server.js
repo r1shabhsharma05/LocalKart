@@ -1,1 +1,51 @@
-Ly8gU3RhcnRzIHRoZSBhcHAgZnJvbSBhcHAuanM6IERCIGZpcnN0LCB0aGVuIHRoZSBmcm9udGVuZCAoVml0ZSBpbiBkZXYsCi8vIHN0YXRpYyBkaXN0IGluIHByb2R1Y3Rpb24pLiBLZXB0IHRoaW4gc28gdGVzdHMgY2FuIGltcG9ydCBhcHAuanMgYWxvbmUuCnJlcXVpcmUoJ2RvdGVudicpLmNvbmZpZygpOwpjb25zdCBleHByZXNzID0gcmVxdWlyZSgnZXhwcmVzcycpOwpjb25zdCBodHRwID0gcmVxdWlyZSgnaHR0cCcpOwpjb25zdCBwYXRoID0gcmVxdWlyZSgncGF0aCcpOwpjb25zdCB7IHBhdGhUb0ZpbGVVUkwgfSA9IHJlcXVpcmUoJ3VybCcpOwpjb25zdCBhcHAgPSByZXF1aXJlKCcuL2FwcCcpOwpjb25zdCBjb25uZWN0REIgPSByZXF1aXJlKCcuL2NvbmZpZy9kYicpOwoKY29uc3Qgc2VydmVyID0gaHR0cC5jcmVhdGVTZXJ2ZXIoYXBwKTsKY29uc3QgUE9SVCA9IHByb2Nlc3MuZW52LlBPUlQgfHwgNjAwMjsKCmFzeW5jIGZ1bmN0aW9uIHN0YXJ0U2VydmVyKCkgewogIGlmICghcHJvY2Vzcy5lbnYuSldUX1NFQ1JFVCB8fCBCdWZmZXIuYnl0ZUxlbmd0aChwcm9jZXNzLmVudi5KV1RfU0VDUkVULCAndXRmOCcpIDwgMzIpIHsKICAgIHRocm93IG5ldyBFcnJvcignSldUX1NFQ1JFVCBtdXN0IGJlIHNldCB0byBhIHJhbmRvbSBzZWNyZXQgb2YgYXQgbGVhc3QgMzIgYnl0ZXMuJyk7CiAgfQoKICBhd2FpdCBjb25uZWN0REIoKTsKCiAgaWYgKHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSAncHJvZHVjdGlvbicpIHsKICAgIGNvbnN0IGZyb250ZW5kRGlzdCA9IHBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsICcuLi9mcm9udGVuZC9kaXN0Jyk7CiAgICBhcHAudXNlKGV4cHJlc3Muc3RhdGljKGZyb250ZW5kRGlzdCkpOwogICAgYXBwLmdldCgnKicsIChyZXEsIHJlcykgPT4gcmVzLnNlbmRGaWxlKHBhdGguam9pbihmcm9udGVuZERpc3QsICdpbmRleC5odG1sJykpKTsKICB9IGVsc2UgewogICAgY29uc3Qgdml0ZUVudHJ5ID0gcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJy4uL2Zyb250ZW5kL25vZGVfbW9kdWxlcy92aXRlL2Rpc3Qvbm9kZS9pbmRleC5qcycpOwogICAgY29uc3QgeyBjcmVhdGVTZXJ2ZXIgfSA9IGF3YWl0IGltcG9ydChwYXRoVG9GaWxlVVJMKHZpdGVFbnRyeSkuaHJlZik7CiAgICBjb25zdCB2aXRlID0gYXdhaXQgY3JlYXRlU2VydmVyKHsKICAgICAgcm9vdDogcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJy4uL2Zyb250ZW5kJyksCiAgICAgIGNvbmZpZ0ZpbGU6IGZhbHNlLAogICAgICBzZXJ2ZXI6IHsgbWlkZGxld2FyZU1vZGU6IHRydWUsIGhtcjogeyBzZXJ2ZXIgfSB9LAogICAgICBhcHBUeXBlOiAnc3BhJywKICAgIH0pOwogICAgYXBwLnVzZSh2aXRlLm1pZGRsZXdhcmVzKTsKICB9CgogIHNlcnZlci5vbignZXJyb3InLCAoZXJyb3IpID0+IHsKICAgIGlmIChlcnJvci5jb2RlID09PSAnRUFERFJJTlVTRScpIHsKICAgICAgY29uc29sZS5lcnJvcihgUG9ydCAke1BPUlR9IGlzIGFscmVhZHkgaW4gdXNlLiBMb2NhbEthcnQgbWF5IGFscmVhZHkgYmUgcnVubmluZyBhdCBodHRwOi8vbG9jYWxob3N0OiR7UE9SVH0uYCk7CiAgICB9IGVsc2UgewogICAgICBjb25zb2xlLmVycm9yKCdMb2NhbEthcnQgc2VydmVyIGZhaWxlZCB0byBzdGFydDonLCBlcnJvci5tZXNzYWdlKTsKICAgIH0KICAgIHByb2Nlc3MuZXhpdCgxKTsKICB9KTsKCiAgc2VydmVyLmxpc3RlbihQT1JULCAoKSA9PiB7CiAgICBjb25zb2xlLmxvZyhgTG9jYWxLYXJ0IGlzIHJ1bm5pbmcgYXQgaHR0cDovL2xvY2FsaG9zdDoke1BPUlR9YCk7CiAgfSk7Cn0KCnN0YXJ0U2VydmVyKCk7Cg==
+// Starts the app from app.js: DB first, then the frontend (Vite in dev,
+// static dist in production). Kept thin so tests can import app.js alone.
+require('dotenv').config();
+const express = require('express');
+const http = require('http');
+const path = require('path');
+const { pathToFileURL } = require('url');
+const app = require('./app');
+const connectDB = require('./config/db');
+
+const server = http.createServer(app);
+const PORT = process.env.PORT || 6002;
+
+async function startServer() {
+  if (!process.env.JWT_SECRET || Buffer.byteLength(process.env.JWT_SECRET, 'utf8') < 32) {
+    throw new Error('JWT_SECRET must be set to a random secret of at least 32 bytes.');
+  }
+
+  await connectDB();
+
+  if (process.env.NODE_ENV === 'production') {
+    const frontendDist = path.resolve(__dirname, '../frontend/dist');
+    app.use(express.static(frontendDist));
+    app.get('*', (req, res) => res.sendFile(path.join(frontendDist, 'index.html')));
+  } else {
+    const viteEntry = path.resolve(__dirname, '../frontend/node_modules/vite/dist/node/index.js');
+    const { createServer } = await import(pathToFileURL(viteEntry).href);
+    const vite = await createServer({
+      root: path.resolve(__dirname, '../frontend'),
+      configFile: false,
+      server: { middlewareMode: true, hmr: { server } },
+      appType: 'spa',
+    });
+    app.use(vite.middlewares);
+  }
+
+  server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+      console.error(`Port ${PORT} is already in use. LocalKart may already be running at http://localhost:${PORT}.`);
+    } else {
+      console.error('LocalKart server failed to start:', error.message);
+    }
+    process.exit(1);
+  });
+
+  server.listen(PORT, () => {
+    console.log(`LocalKart is running at http://localhost:${PORT}`);
+  });
+}
+
+startServer();

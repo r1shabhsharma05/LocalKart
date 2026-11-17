@@ -229,7 +229,7 @@ a {
   min-width: 150px;
 }
 
-.footer-column h4 {
+.footer-column h3 {
   margin: 0 0 8px;
   font-size: 0.8rem;
   font-weight: 800;
@@ -720,6 +720,67 @@ a {
   border-radius: 18px;
   border: 1px dashed var(--border);
   color: var(--muted);
+}
+
+/* First-load skeleton: same footprint as a product rail card, so the page
+   does not jump when listings arrive. Shimmer off for reduced motion. */
+.loading-skeleton {
+  grid-column: 1 / -1;
+}
+
+.waking-note {
+  text-align: center;
+  color: var(--muted);
+  padding: 8px 12px 20px;
+  margin: 0;
+}
+
+.skeleton-grid {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.skeleton-card {
+  flex: 0 0 clamp(258px, 23vw, 292px);
+  min-height: 478px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: white;
+  padding: 12px;
+}
+
+.skeleton-image,
+.skeleton-line {
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--surface-subtle) 25%, #e8edf5 50%, var(--surface-subtle) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-image {
+  height: 190px;
+  margin-bottom: 16px;
+}
+
+.skeleton-line {
+  height: 14px;
+  margin: 10px 0;
+}
+
+.skeleton-line-short {
+  width: 55%;
+}
+
+@keyframes skeleton-shimmer {
+  to { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-image,
+  .skeleton-line {
+    animation: none;
+  }
 }
 
 .auth-page {
@@ -1606,6 +1667,17 @@ a {
 @media (max-width: 420px) {
   .welcome-user {
     display: none;
+  }
+
+  /* Footer columns are 150px min-width each and the row never wrapped,
+     so the page scrolled horizontally (scrollWidth 690 at 390px). */
+  .footer-inner {
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    min-width: 0;
+    flex: 1 1 140px;
   }
 
   .hero-search {
@@ -2710,7 +2782,7 @@ a {
 }
 
 .hero-product-details span {
-  color: #777;
+  color: #595959;
   font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.08em;

@@ -39,7 +39,7 @@ npm --prefix frontend test   # 16 tests: homepage rails/filtering, image crop, l
 npx --prefix frontend playwright test   # public flow on the live site: listings load → search → open a listing; plus a 390px no-overflow check
 ```
 
-Measured 2026-11-17: **20 backend + 16 frontend tests passing, E2E 2/2 green locally.** CI (`.github/workflows/ci.yml`) landed 2026-11-17 in the follow-up to the flagship pass — its first run is the merge of that PR, so do not claim "CI green" until that run passes; check the [Actions tab](https://github.com/r1shabhsharma05/LocalKart/actions). API docs: [`API.md`](API.md). No Redis, no TypeScript, no payments — none of those are in this repo, and none are claimed.
+Measured 2026-11-17: **20 backend + 16 frontend tests passing, E2E 2/2 green locally.** CI (`.github/workflows/ci.yml`) landed 2026-11-17 in the follow-up to the flagship pass — green on the merge run ([Actions run 44120418826](https://github.com/r1shabhsharma05/LocalKart/actions/runs/44120418826), backend + frontend both passing). API docs: [`API.md`](API.md). No Redis, no TypeScript, no payments — none of those are in this repo, and none are claimed.
 
 Lighthouse on the homepage (local production build, 1 seeded listing, 2026-11-17): **Performance 83, Accessibility 100, Best Practices 96, SEO 92** (before fixes: 82 / 94 / 92 / 83 — the fixes were a meta description, footer heading order, hero contrast, and unblocking Google Fonts in the CSP). A live-site Lighthouse run is still owed — it needs a machine with direct browser internet access.
 
@@ -227,7 +227,7 @@ From `git log` (39 of 57 commits are Rishabh's; Shivam 16, Aman 2). This is the 
 - **Cross-origin auth fixes** — `SameSite=None` production cookies so CSRF + session work Vercel → Render; raised the email-code IP rate limit 5 → 20/hour (campus NAT shares one IP; the per-email 5/hour cap is the real anti-spam control).
 - **Login/signup UI** — neon-lamp auth pages + V4 cube OTP screen, show/hide password toggles, OTP text wrapping fixes.
 - **Listing photos** — adjust/crop product photos to the card frame before listing.
-- **Flagship pass (2026-11-17)** — backend API tests (19), product pagination + search, shared error handler, CI, waking-up loading state, `API.md`, this section.
+- **Flagship pass (2026-11-17)** — backend API tests (20), product pagination + search, shared error handler, CI, waking-up loading state, `API.md`, this section.
 
 Live real listings (measured 2026-11-17 via `/api/products`): **8 real listings across 4 categories** (Books, Laptops, Clothes, Electronics), all `isDemo: false`, all with Cloudinary photos. More real listings need GLA sellers to list them — that is a people step, not a code step.
 

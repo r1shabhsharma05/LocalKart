@@ -1,1 +1,91 @@
-Ly8gRXhwcmVzcyBhcHAgb25seSDigJQgbm8gREIgY29ubmVjdCwgbm8gbGlzdGVuLiBzZXJ2ZXIuanMgc3RhcnRzIGl0OwovLyB0ZXN0cyBpbXBvcnQgdGhpcyBmaWxlIGFuZCBwb2ludCBpdCBhdCBhbiBpbi1tZW1vcnkgTW9uZ29EQi4KY29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTsKY29uc3QgY29ycyA9IHJlcXVpcmUoJ2NvcnMnKTsKY29uc3QgaGVsbWV0ID0gcmVxdWlyZSgnaGVsbWV0Jyk7CmNvbnN0IHBhdGggPSByZXF1aXJlKCdwYXRoJyk7CmNvbnN0IGF1dGhSb3V0ZXMgPSByZXF1aXJlKCcuL3JvdXRlcy9hdXRoUm91dGVzJyk7CmNvbnN0IHByb2R1Y3RSb3V0ZXMgPSByZXF1aXJlKCcuL3JvdXRlcy9wcm9kdWN0Um91dGVzJyk7CmNvbnN0IG1lc3NhZ2VSb3V0ZXMgPSByZXF1aXJlKCcuL3JvdXRlcy9tZXNzYWdlUm91dGVzJyk7CmNvbnN0IHJldmlld1JvdXRlcyA9IHJlcXVpcmUoJy4vcm91dGVzL3Jldmlld1JvdXRlcycpOwpjb25zdCBhaVJvdXRlcyA9IHJlcXVpcmUoJy4vcm91dGVzL2FpUm91dGVzJyk7CmNvbnN0IHsgdmVyaWZ5Q3NyZlRva2VuIH0gPSByZXF1aXJlKCcuL21pZGRsZXdhcmUvY3NyZk1pZGRsZXdhcmUnKTsKY29uc3QgZXJyb3JIYW5kbGVyID0gcmVxdWlyZSgnLi9taWRkbGV3YXJlL2Vycm9ySGFuZGxlcicpOwoKY29uc3QgYXBwID0gZXhwcmVzcygpOwoKY29uc3QgYWxsb3dlZE9yaWdpbnMgPSBuZXcgU2V0KAogIChwcm9jZXNzLmVudi5GUk9OVEVORF9VUkwgfHwgJycpCiAgICAuc3BsaXQoJywnKQogICAgLm1hcCgob3JpZ2luKSA9PiBvcmlnaW4udHJpbSgpKQogICAgLmZpbHRlcihCb29sZWFuKQogICAgLm1hcCgob3JpZ2luKSA9PiB7CiAgICAgIHRyeSB7CiAgICAgICAgcmV0dXJuIG5ldyBVUkwob3JpZ2luKS5vcmlnaW47CiAgICAgIH0gY2F0Y2ggewogICAgICAgIHJldHVybiBvcmlnaW47CiAgICAgIH0KICAgIH0pCik7CgppZiAocHJvY2Vzcy5lbnYuTk9ERV9FTlYgIT09ICdwcm9kdWN0aW9uJykgewogIGFsbG93ZWRPcmlnaW5zLmFkZCgnaHR0cDovL2xvY2FsaG9zdDo1MTczJyk7CiAgYWxsb3dlZE9yaWdpbnMuYWRkKCdodHRwOi8vMTI3LjAuMC4xOjUxNzMnKTsKICBhbGxvd2VkT3JpZ2lucy5hZGQoJ2h0dHA6Ly9sb2NhbGhvc3Q6NTE3NCcpOwogIGFsbG93ZWRPcmlnaW5zLmFkZCgnaHR0cDovLzEyNy4wLjAuMTo1MTc0Jyk7Cn0gZWxzZSB7CiAgY29uc3QgaW52YWxpZE9yaWdpbnMgPSBbLi4uYWxsb3dlZE9yaWdpbnNdLmZpbHRlcigob3JpZ2luKSA9PiB7CiAgICB0cnkgewogICAgICBjb25zdCBwYXJzZWRPcmlnaW4gPSBuZXcgVVJMKG9yaWdpbik7CiAgICAgIHJldHVybiBwYXJzZWRPcmlnaW4ucHJvdG9jb2wgIT09ICdodHRwczonIHx8IHBhcnNlZE9yaWdpbi5vcmlnaW4gIT09IG9yaWdpbjsKICAgIH0gY2F0Y2ggewogICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICB9KTsKICBpZiAoaW52YWxpZE9yaWdpbnMubGVuZ3RoID4gMCkgewogICAgdGhyb3cgbmV3IEVycm9yKCdQcm9kdWN0aW9uIEZST05URU5EX1VSTCB2YWx1ZXMgbXVzdCBiZSB2YWxpZCBIVFRQUyBvcmlnaW5zLicpOwogIH0KfQoKYXBwLmRpc2FibGUoJ3gtcG93ZXJlZC1ieScpOwphcHAudXNlKGhlbG1ldCh7CiAgY29udGVudFNlY3VyaXR5UG9saWN5OiB7CiAgICBkaXJlY3RpdmVzOiB7CiAgICAgIGRlZmF1bHRTcmM6IFsiJ3NlbGYnIl0sCiAgICAgIHNjcmlwdFNyYzogWyInc2VsZiciXSwKICAgICAgc3R5bGVTcmM6IFsiJ3NlbGYnIiwgIid1bnNhZmUtaW5saW5lJyIsICdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tJ10sCiAgICAgIGltZ1NyYzogWyInc2VsZiciLCAnZGF0YTonLCAnaHR0cHM6J10sCiAgICAgIGZvbnRTcmM6IFsiJ3NlbGYnIiwgJ2RhdGE6JywgJ2h0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20nXSwKICAgICAgY29ubmVjdFNyYzogWyInc2VsZiciLCAnaHR0cHM6JywgJ3dzOicsICd3c3M6J10sCiAgICAgIG9iamVjdFNyYzogWyInbm9uZSciXSwKICAgICAgZnJhbWVBbmNlc3RvcnM6IFsiJ25vbmUnIl0sCiAgICB9LAogIH0sCiAgaHN0czogcHJvY2Vzcy5lbnYuTk9ERV9FTlYgPT09ICdwcm9kdWN0aW9uJywKfSkpOwphcHAudXNlKGNvcnMoewogIG9yaWdpbihvcmlnaW4sIGNhbGxiYWNrKSB7CiAgICBpZiAoIW9yaWdpbiB8fCBhbGxvd2VkT3JpZ2lucy5oYXMob3JpZ2luKSkgcmV0dXJuIGNhbGxiYWNrKG51bGwsIHRydWUpOwogICAgcmV0dXJuIGNhbGxiYWNrKG51bGwsIGZhbHNlKTsKICB9LAogIGNyZWRlbnRpYWxzOiB0cnVlLAogIG1ldGhvZHM6IFsnR0VUJywgJ0hFQUQnLCAnUE9TVCcsICdQVVQnLCAnUEFUQ0gnLCAnREVMRVRFJywgJ09QVElPTlMnXSwKICBhbGxvd2VkSGVhZGVyczogWydDb250ZW50LVR5cGUnLCAnWC1DU1JGLVRva2VuJ10sCn0pKTsKYXBwLnVzZShleHByZXNzLmpzb24oeyBsaW1pdDogJzFtYicgfSkpOwphcHAudXNlKCcvdXBsb2FkcycsIGV4cHJlc3Muc3RhdGljKHBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsICd1cGxvYWRzJykpKTsKCmFwcC5nZXQoJy9hcGkvaGVhbHRoJywgKHJlcSwgcmVzKSA9PiB7CiAgcmVzLmpzb24oeyBzdGF0dXM6ICdvaycsIG1lc3NhZ2U6ICdMb2NhbEthcnQgYmFja2VuZCBpcyBydW5uaW5nJyB9KTsKfSk7CgphcHAudXNlKCcvYXBpJywgdmVyaWZ5Q3NyZlRva2VuKTsKYXBwLnVzZSgnL2FwaS9hdXRoJywgYXV0aFJvdXRlcyk7CmFwcC51c2UoJy9hcGkvcHJvZHVjdHMnLCBwcm9kdWN0Um91dGVzKTsKYXBwLnVzZSgnL2FwaS9tZXNzYWdlcycsIG1lc3NhZ2VSb3V0ZXMpOwphcHAudXNlKCcvYXBpL3Jldmlld3MnLCByZXZpZXdSb3V0ZXMpOwphcHAudXNlKCcvYXBpL2FpJywgYWlSb3V0ZXMpOwoKYXBwLnVzZShlcnJvckhhbmRsZXIpOwoKbW9kdWxlLmV4cG9ydHMgPSBhcHA7Cg==
+// Express app only — no DB connect, no listen. server.js starts it;
+// tests import this file and point it at an in-memory MongoDB.
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const path = require('path');
+const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
+const messageRoutes = require('./routes/messageRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
+const aiRoutes = require('./routes/aiRoutes');
+const { verifyCsrfToken } = require('./middleware/csrfMiddleware');
+const errorHandler = require('./middleware/errorHandler');
+
+const app = express();
+
+const allowedOrigins = new Set(
+  (process.env.FRONTEND_URL || '')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean)
+    .map((origin) => {
+      try {
+        return new URL(origin).origin;
+      } catch {
+        return origin;
+      }
+    })
+);
+
+if (process.env.NODE_ENV !== 'production') {
+  allowedOrigins.add('http://localhost:5173');
+  allowedOrigins.add('http://127.0.0.1:5173');
+  allowedOrigins.add('http://localhost:5174');
+  allowedOrigins.add('http://127.0.0.1:5174');
+} else {
+  const invalidOrigins = [...allowedOrigins].filter((origin) => {
+    try {
+      const parsedOrigin = new URL(origin);
+      return parsedOrigin.protocol !== 'https:' || parsedOrigin.origin !== origin;
+    } catch {
+      return true;
+    }
+  });
+  if (invalidOrigins.length > 0) {
+    throw new Error('Production FRONTEND_URL values must be valid HTTPS origins.');
+  }
+}
+
+app.disable('x-powered-by');
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      imgSrc: ["'self'", 'data:', 'https:'],
+      fontSrc: ["'self'", 'data:', 'https://fonts.gstatic.com'],
+      connectSrc: ["'self'", 'https:', 'ws:', 'wss:'],
+      objectSrc: ["'none'"],
+      frameAncestors: ["'none'"],
+    },
+  },
+  hsts: process.env.NODE_ENV === 'production',
+}));
+app.use(cors({
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.has(origin)) return callback(null, true);
+    return callback(null, false);
+  },
+  credentials: true,
+  methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'X-CSRF-Token'],
+}));
+app.use(express.json({ limit: '1mb' }));
+app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'LocalKart backend is running' });
+});
+
+app.use('/api', verifyCsrfToken);
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/messages', messageRoutes);
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/ai', aiRoutes);
+
+app.use(errorHandler);
+
+module.exports = app;

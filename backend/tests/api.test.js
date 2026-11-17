@@ -5,6 +5,9 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import request from 'supertest';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import { mkdtemp, rm } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 
 process.env.JWT_SECRET = 'test-secret-that-is-at-least-32-bytes-long!';
 process.env.BREVO_API_KEY = 'test-brevo-key';
@@ -12,6 +15,7 @@ process.env.BREVO_FROM = 'test@localkart.test';
 process.env.NODE_ENV = 'test';
 
 let mongo;
+let mongoDbPath;
 let app;
 const sentCodes = [];
 const realFetch = global.fetch;
@@ -28,7 +32,11 @@ const captureBrevoCode = async (url, options) => {
 
 beforeAll(async () => {
   global.fetch = captureBrevoCode;
-  mongo = await MongoMemoryServer.create();
+  // Explicit dbPath so afterAll can remove it even if create() throws:
+  // the default /tmp path leaked ~200MB per failed run and filled this
+  // VM's 512MB /tmp until mongod itself failed with fassert().
+  mongoDbPath = await mkdtemp(path.join(os.tmpdir(), 'localkart-mongo-'));
+  mongo = await MongoMemoryServer.create({ instance: { dbPath: mongoDbPath } });
   process.env.MONGO_URI = mongo.getUri();
   await mongoose.connect(process.env.MONGO_URI);
   ({ default: app } = await import('../app'));
@@ -36,8 +44,11 @@ beforeAll(async () => {
 
 afterAll(async () => {
   global.fetch = realFetch;
-  await mongoose.disconnect();
-  await mongo.stop();
+  if (mongo) {
+    await mongoose.disconnect().catch(() => {});
+    await mongo.stop().catch(() => {});
+  }
+  if (mongoDbPath) await rm(mongoDbPath, { recursive: true, force: true }).catch(() => {});
 });
 
 // One agent per user: cookies (session + CSRF) persist across its requests.
@@ -83,6 +94,7 @@ describe('health', () => {
     const res = await request(app).get('/api/health');
     expect(res.status).toBe(200);
     expect(res.body.status).toBe('ok');
+    expect(typeof res.body.commit).toBe('string');
   });
 });
 

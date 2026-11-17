@@ -75,8 +75,10 @@ app.use(cors({
 app.use(express.json({ limit: '1mb' }));
 app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
 
+// commit pins the deployed code: Render sets RENDER_GIT_COMMIT, so a
+// live health check proves which deploy is actually serving traffic.
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'LocalKart backend is running' });
+  res.json({ status: 'ok', message: 'LocalKart backend is running', commit: process.env.RENDER_GIT_COMMIT || 'unknown' });
 });
 
 app.use('/api', verifyCsrfToken);
